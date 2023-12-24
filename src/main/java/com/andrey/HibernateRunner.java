@@ -1,5 +1,6 @@
 package com.andrey;
 
+import com.andrey.entity.Role;
 import com.andrey.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -26,6 +27,7 @@ public class HibernateRunner {
                     .lastname("Ivanov")
                     .birthDay(LocalDate.of(1997, 8, 14))
                     .age(26)
+                    .role(Role.USER)
                     .build();
 
             session.persist(user);
