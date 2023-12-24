@@ -1,5 +1,7 @@
 package com.andrey;
 
+import com.andrey.entity.Birthday;
+import com.andrey.entity.Role;
 import com.andrey.entity.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
@@ -22,8 +24,9 @@ class HibernateRunnerTest {
                 .username("ivan123")
                 .firstname("Ivan")
                 .lastname("Ivanov")
-                .birthDay(LocalDate.of(1997, 8, 14))
-                .age(26)
+                .birthDay(new Birthday(LocalDate.of(1997, 8, 14)))
+                .age(new Birthday(LocalDate.of(1997, 8, 14)).getAge())
+                .role(Role.ADMIN)
                 .build();
 
         String sql = """
