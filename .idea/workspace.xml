@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="custom attribute converter">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/MyJson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/type/MyJsonType.java" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="custom user type">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,8 +165,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Hibernate_Practice [clean]" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkReflectionApi" />
+        <item itemvalue="Gradle.Hibernate_Practice [clean]" />
         <item itemvalue="Application.HibernateRunner" />
       </list>
     </recent_temporary>
@@ -192,7 +188,9 @@
       <workItem from="1703439572057" duration="3967000" />
       <workItem from="1703455261835" duration="4508000" />
       <workItem from="1703462900471" duration="5794000" />
-      <workItem from="1703468728241" duration="1865000" />
+      <workItem from="1703468728241" duration="2177000" />
+      <workItem from="1703474472415" duration="626000" />
+      <workItem from="1703534916168" duration="1360000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -229,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703442303923</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="custom user type">
+      <created>1703470703896</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703470703896</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +246,7 @@
     <MESSAGE value="session" />
     <MESSAGE value="type converters" />
     <MESSAGE value="custom attribute converter" />
-    <option name="LAST_COMMIT_MESSAGE" value="custom attribute converter" />
+    <MESSAGE value="custom user type" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom user type" />
   </component>
 </project>

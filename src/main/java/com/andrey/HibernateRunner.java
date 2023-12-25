@@ -24,25 +24,29 @@ public class HibernateRunner {
             Session session = sessionFactory.openSession()) {
             session.beginTransaction();
 
-            MyJson json = new MyJson();
-            json.setStringProp("""
-                    {"id" : "1", "name" : "Ivan"}
-                    """);
-            User user = User.builder()
-                    .username("ivan1123")
-                    .firstname("Ivan")
-                    .lastname("Ivanov")
-                    .birthDay(new Birthday(LocalDate.of(1997, 8, 14)))
-                    .age(new Birthday(LocalDate.of(1997, 8, 14)).getAge())
-                    .role(Role.ADMIN)
-                    .info(json)
-                    .build();
+//            MyJson json = new MyJson();
+//            json.setStringProp("""
+//                    {"id" : "1", "name" : "Ivan"}
+//                    """);
+//            User user = User.builder()
+//                    .username("ivan1123")
+//                    .firstname("Ivan")
+//                    .lastname("Ivanov")
+//                    .birthDay(new Birthday(LocalDate.of(1997, 8, 14)))
+//                    .age(new Birthday(LocalDate.of(1997, 8, 14)).getAge())
+//                    .role(Role.USER)
+//                    .info(json)
+//                    .build();
 
-            session.persist(user);
+            User user1 = session.get(User.class, "ivan123");
+            user1.setLastname("Petrov"); // Dirty session
+            User user2 = session.get(User.class, "ivan123");
+            User user3 = session.get(User.class, "ivan1123");
+
+//            session.clear();
+            session.evict(user1);
 
             session.getTransaction().commit();
         }
-
     }
-
 }
