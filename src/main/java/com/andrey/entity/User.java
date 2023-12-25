@@ -1,11 +1,12 @@
 package com.andrey.entity;
 
-import com.andrey.converter.BirthdayConverter;
+import com.andrey.type.MyJsonType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Type;
 
 @Data
 @AllArgsConstructor
@@ -25,5 +26,8 @@ public class User {
     private Integer age;
     @Enumerated(EnumType.STRING)
     private Role role;
+//    @JdbcTypeCode(SqlTypes.JSON)
+    @Type(MyJsonType.class)
+    private MyJson info;
 
 }
