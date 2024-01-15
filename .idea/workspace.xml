@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="first level cache">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/util/HibernateUtil.java" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="entity lifecycle">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,23 +28,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Hibernate_Practice" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Hibernate_Practice" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="Hibernate_Practice" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -164,8 +149,31 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="Hibernate_Practice [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Hibernate_Practice [dependencies]" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkReflectionApi" />
         <item itemvalue="Gradle.Hibernate_Practice [clean]" />
         <item itemvalue="Application.HibernateRunner" />
@@ -192,7 +200,14 @@
       <workItem from="1703468728241" duration="2177000" />
       <workItem from="1703474472415" duration="626000" />
       <workItem from="1703534916168" duration="1649000" />
-      <workItem from="1703554608270" duration="5631000" />
+      <workItem from="1703554608270" duration="5720000" />
+      <workItem from="1703933094071" duration="483000" />
+      <workItem from="1703941726022" duration="123000" />
+      <workItem from="1704737723382" duration="685000" />
+      <workItem from="1704780164102" duration="30000" />
+      <workItem from="1704816162441" duration="1205000" />
+      <workItem from="1705166625073" duration="1001000" />
+      <workItem from="1705321359778" duration="2066000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -243,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703537759601</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="entity lifecycle">
+      <created>1703560701305</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1703560701305</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +279,7 @@
     <MESSAGE value="custom attribute converter" />
     <MESSAGE value="custom user type" />
     <MESSAGE value="first level cache" />
-    <option name="LAST_COMMIT_MESSAGE" value="first level cache" />
+    <MESSAGE value="entity lifecycle" />
+    <option name="LAST_COMMIT_MESSAGE" value="entity lifecycle" />
   </component>
 </project>

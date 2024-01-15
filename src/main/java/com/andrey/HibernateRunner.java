@@ -4,8 +4,13 @@ import com.andrey.entity.User;
 import com.andrey.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HibernateRunner {
+
+    private static final Logger log = LoggerFactory.getLogger(HibernateRunner.class);
 
     public static void main(String[] args) {
 
@@ -14,28 +19,23 @@ public class HibernateRunner {
                 .firstname("Ivan")
                 .lastname("Ivanov")
                 .build();
+        log.info("User entity is in transient state, object - {}", user);
 
         try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()) {
-            try(Session session1 = sessionFactory.openSession()) {
-                session1.beginTransaction();
+            Session session1 = sessionFactory.openSession();
+            try(session1) {
+                Transaction transaction = session1.beginTransaction();
+                log.trace("Transaction has been created, object - {}", transaction);
 
-                session1.persist(user);
-//                session1.remove(user);
+                session1.merge(user);
+                log.trace("User entity is in persistent state: {}, session: {}", user, session1);
 
                 session1.getTransaction().commit();
             }
-
-            try(Session session2 = sessionFactory.openSession()) {
-                session2.beginTransaction();
-
-                session2.update(user);
-//                session2.remove(user);
-                user.setLastname("Petrov");
-
-                session2.refresh(user);
-
-                session2.getTransaction().commit();
-            }
+            log.warn("User entity is in detached state: {}, session is closed: {}", user, session1);
+        } catch (Exception exception) {
+            log.error("Exception occurred", exception);
+            throw exception;
         }
     }
 }
