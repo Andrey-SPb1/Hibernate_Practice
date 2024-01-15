@@ -1,0 +1,24 @@
+[2024-01-15 17:00:41,953] INFO [com.andrey.HibernateRunner: 22] User entity is in transient state, object - User(username=ivan123, firstname=Ivan, lastname=Ivanov, birthDay=null, age=null, role=null, info=null)
+[2024-01-15 17:00:42,324] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 6.4.1.Final
+[2024-01-15 17:00:43,451] INFO [org.hibernate.cache.internal.RegionFactoryInitiator: 50] HHH000026: Second-level cache disabled
+[2024-01-15 17:00:44,140] WARN [org.hibernate.orm.connections.pooling: 81] HHH10001002: Using built-in connection pool (not intended for production use)
+[2024-01-15 17:00:44,159] INFO [org.hibernate.orm.connections.pooling: 136] HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+[2024-01-15 17:00:44,160] INFO [org.hibernate.orm.connections.pooling: 158] HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]
+[2024-01-15 17:00:44,161] INFO [org.hibernate.orm.connections.pooling: 167] HHH10001001: Connection properties: {password=****, user=postgres}
+[2024-01-15 17:00:44,162] INFO [org.hibernate.orm.connections.pooling: 171] HHH10001003: Autocommit mode: false
+[2024-01-15 17:00:44,178] INFO [org.hibernate.orm.connections.pooling: 371] HHH10001115: Connection pool size: 20 (min=1)
+[2024-01-15 17:00:49,599] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 58] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-01-15 17:00:50,031] WARN [com.andrey.HibernateRunner: 35] User entity is in detached state: User(username=ivan123, firstname=Ivan, lastname=Ivanov, birthDay=null, age=null, role=null, info=null), session is closed: SessionImpl(73689328<closed>)
+[2024-01-15 17:00:50,034] INFO [org.hibernate.orm.connections.pooling: 606] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]
+[2024-01-15 17:26:50,936] INFO [com.andrey.HibernateRunner: 22] User entity is in transient state, object - User(username=ivan123, firstname=Ivan, lastname=Ivanov, birthDay=null, age=null, role=null, info=null)
+[2024-01-15 17:26:51,273] INFO [org.hibernate.Version: 44] HHH000412: Hibernate ORM core version 6.4.1.Final
+[2024-01-15 17:26:52,294] INFO [org.hibernate.cache.internal.RegionFactoryInitiator: 50] HHH000026: Second-level cache disabled
+[2024-01-15 17:26:52,901] WARN [org.hibernate.orm.connections.pooling: 81] HHH10001002: Using built-in connection pool (not intended for production use)
+[2024-01-15 17:26:52,913] INFO [org.hibernate.orm.connections.pooling: 136] HHH10001005: Loaded JDBC driver class: org.postgresql.Driver
+[2024-01-15 17:26:52,914] INFO [org.hibernate.orm.connections.pooling: 158] HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]
+[2024-01-15 17:26:52,915] INFO [org.hibernate.orm.connections.pooling: 167] HHH10001001: Connection properties: {password=****, user=postgres}
+[2024-01-15 17:26:52,916] INFO [org.hibernate.orm.connections.pooling: 171] HHH10001003: Autocommit mode: false
+[2024-01-15 17:26:52,927] INFO [org.hibernate.orm.connections.pooling: 371] HHH10001115: Connection pool size: 20 (min=1)
+[2024-01-15 17:26:58,193] INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator: 58] HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-01-15 17:26:58,658] WARN [com.andrey.HibernateRunner: 35] User entity is in detached state: User(username=ivan123, firstname=Ivan, lastname=Ivanov, birthDay=null, age=null, role=null, info=null), session is closed: SessionImpl(1603213074<closed>)
+[2024-01-15 17:26:58,661] INFO [org.hibernate.orm.connections.pooling: 606] HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]
