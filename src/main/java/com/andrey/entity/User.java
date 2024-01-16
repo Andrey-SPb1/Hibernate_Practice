@@ -18,14 +18,16 @@ public class User {
 
     @Id
     private String username;
-    private String firstname;
-    private String lastname;
-//    @Convert(converter = BirthdayConverter.class)
-    @Column(name = "birth_day")
-    private Birthday birthDay;
+
+    @Embedded
+    @AttributeOverride(name = "birthDay", column = @Column(name = "birth_day"))
+    private PersonalInfo personalInfo;
+
     private Integer age;
+
     @Enumerated(EnumType.STRING)
     private Role role;
+
 //    @JdbcTypeCode(SqlTypes.JSON)
     @Type(MyJsonType.class)
     private MyJson info;

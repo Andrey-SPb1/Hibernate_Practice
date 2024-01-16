@@ -1,23 +1,28 @@
 package com.andrey;
 
+import com.andrey.entity.Birthday;
+import com.andrey.entity.PersonalInfo;
 import com.andrey.entity.User;
 import com.andrey.util.HibernateUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
+import java.time.LocalDate;
+
+@Slf4j
 public class HibernateRunner {
-
-    private static final Logger log = LoggerFactory.getLogger(HibernateRunner.class);
 
     public static void main(String[] args) {
 
         User user = User.builder()
                 .username("ivan123")
-                .firstname("Ivan")
-                .lastname("Ivanov")
+                .personalInfo(PersonalInfo.builder()
+                        .firstname("Petr")
+                        .lastname("Petrov")
+                        .birthDay(new Birthday(LocalDate.of(2000, 12, 15)))
+                        .build())
                 .build();
         log.info("User entity is in transient state, object - {}", user);
 

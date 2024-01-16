@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="log4j">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Rolling File Appender">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/PersonalInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate-starter.log" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate-starter.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +208,9 @@
       <workItem from="1704780164102" duration="30000" />
       <workItem from="1704816162441" duration="1205000" />
       <workItem from="1705166625073" duration="1001000" />
-      <workItem from="1705321359778" duration="4046000" />
+      <workItem from="1705321359778" duration="4249000" />
+      <workItem from="1705329374204" duration="193000" />
+      <workItem from="1705434351748" duration="1626000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -270,7 +275,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705323703427</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Rolling File Appender">
+      <created>1705328906158</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1705328906158</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +298,7 @@
     <MESSAGE value="first level cache" />
     <MESSAGE value="entity lifecycle" />
     <MESSAGE value="log4j" />
-    <option name="LAST_COMMIT_MESSAGE" value="log4j" />
+    <MESSAGE value="Rolling File Appender" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rolling File Appender" />
   </component>
 </project>
