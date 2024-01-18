@@ -38,6 +38,16 @@ public class HibernateRunner {
                 session1.getTransaction().commit();
             }
             log.warn("User entity is in detached state: {}, session is closed: {}", user, session1);
+            try(Session session = sessionFactory.openSession()) {
+                PersonalInfo key = PersonalInfo.builder()
+                        .firstname("Petr")
+                        .lastname("Petrov")
+                        .birthDay(new Birthday(LocalDate.of(2000, 12, 15)))
+                        .build();
+
+                User user2 = session.get(User.class, key);
+                System.out.println(user2.getUsername());
+            }
         } catch (Exception exception) {
             log.error("Exception occurred", exception);
             throw exception;
