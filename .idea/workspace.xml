@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Rolling File Appender">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/PersonalInfo.java" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Embedded components">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hibernate-starter.log" beforeDir="false" afterPath="$PROJECT_DIR$/hibernate-starter.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hibernate-starter.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
     </list>
@@ -210,7 +209,9 @@
       <workItem from="1705166625073" duration="1001000" />
       <workItem from="1705321359778" duration="4249000" />
       <workItem from="1705329374204" duration="193000" />
-      <workItem from="1705434351748" duration="1626000" />
+      <workItem from="1705434351748" duration="3073000" />
+      <workItem from="1705576166686" duration="3618000" />
+      <workItem from="1705602896367" duration="299000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -282,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705328906158</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Embedded components">
+      <created>1705436126336</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705436126336</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,6 +307,7 @@
     <MESSAGE value="entity lifecycle" />
     <MESSAGE value="log4j" />
     <MESSAGE value="Rolling File Appender" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rolling File Appender" />
+    <MESSAGE value="Embedded components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Embedded components" />
   </component>
 </project>

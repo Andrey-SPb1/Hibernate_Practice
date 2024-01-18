@@ -17,6 +17,11 @@ import org.hibernate.annotations.Type;
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @SequenceGenerator(name = "user_gen", sequenceName = "users_id_seq", allocationSize = 1)
+    private Long id;
+
+    @Column(unique = true)
     private String username;
 
     @Embedded
