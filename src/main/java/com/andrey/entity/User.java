@@ -16,7 +16,10 @@ import org.hibernate.annotations.Type;
 @Table(name = "users", schema = "public")
 public class User {
 
-    @EmbeddedId
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     @AttributeOverride(name = "birthDay", column = @Column(name = "birth_day"))
     private PersonalInfo personalInfo;
 
@@ -32,5 +35,9 @@ public class User {
 //    @JdbcTypeCode(SqlTypes.JSON)
     @Type(MyJsonType.class)
     private MyJson info;
+
+    @ManyToOne
+    @JoinColumn(name = "company_id")
+    private Company company;
 
 }
