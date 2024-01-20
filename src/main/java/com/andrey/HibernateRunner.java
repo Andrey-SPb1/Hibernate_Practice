@@ -35,8 +35,9 @@ public class HibernateRunner {
             try (session1) {
                 session1.beginTransaction();
 
-                session1.persist(google);
-                session1.persist(user);
+//                session1.persist(google);
+//                session1.persist(user);
+                User user1 = session1.get(User.class, 1L);
 
                 session1.getTransaction().commit();
             }

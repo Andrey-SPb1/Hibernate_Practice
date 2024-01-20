@@ -2,13 +2,11 @@ package com.andrey.entity;
 
 import com.andrey.type.MyJsonType;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.Type;
 
 @Data
+@ToString(exclude = "company")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -36,7 +34,7 @@ public class User {
     @Type(MyJsonType.class)
     private MyJson info;
 
-    @ManyToOne
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
     private Company company;
 
