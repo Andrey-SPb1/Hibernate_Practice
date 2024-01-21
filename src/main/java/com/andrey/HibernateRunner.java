@@ -17,14 +17,14 @@ public class HibernateRunner {
     public static void main(String[] args) {
 
         Company google = Company.builder()
-                .name("Google")
+                .name("Amazon")
                 .build();
 
         User user = User.builder()
-                .username("petr123")
+                .username("ivan123")
                 .personalInfo(PersonalInfo.builder()
-                        .firstname("Petr")
-                        .lastname("Petrov")
+                        .firstname("Ivan")
+                        .lastname("Ivanov")
                         .birthDay(new Birthday(LocalDate.of(2000, 12, 15)))
                         .build())
                 .company(google)
@@ -35,9 +35,7 @@ public class HibernateRunner {
             try (session1) {
                 session1.beginTransaction();
 
-//                session1.persist(google);
-//                session1.persist(user);
-                User user1 = session1.get(User.class, 1L);
+                session1.persist(user);
 
                 session1.getTransaction().commit();
             }

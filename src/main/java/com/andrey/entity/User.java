@@ -34,7 +34,7 @@ public class User {
     @Type(MyJsonType.class)
     private MyJson info;
 
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
     @JoinColumn(name = "company_id")
     private Company company;
 
