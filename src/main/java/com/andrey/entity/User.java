@@ -7,6 +7,7 @@ import org.hibernate.annotations.Type;
 
 @Data
 @ToString(exclude = "company")
+@EqualsAndHashCode(of = "username")
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder

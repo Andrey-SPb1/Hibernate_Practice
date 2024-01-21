@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="OneToMany">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Cascade types with collections">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +292,7 @@
       <workItem from="1705841688598" duration="1217000" />
       <workItem from="1705850828443" duration="1677000" />
       <workItem from="1705858366161" duration="3635000" />
-      <workItem from="1705862895441" duration="4065000" />
+      <workItem from="1705862895441" duration="4960000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -415,7 +415,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705852520157</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Cascade types with collections">
+      <option name="closed" value="true" />
+      <created>1705870439651</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1705870439651</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +458,8 @@
     <MESSAGE value="Fetch types" />
     <MESSAGE value="Hibernate proxy" />
     <MESSAGE value="Cascade types" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cascade types" />
+    <MESSAGE value="Cascade types with collections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cascade types with collections" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
