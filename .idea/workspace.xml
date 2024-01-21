@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Cascade types">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="OneToMany">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
     </list>
@@ -53,10 +51,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -71,6 +70,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.HibernateRunnerTest.addUserToNewCompany.executor": "Run",
+    "Gradle.HibernateRunnerTest.deleteCompany.executor": "Run",
     "Gradle.HibernateRunnerTest.oneToMany.executor": "Debug",
     "Gradle.Hibernate_Practice [:HibernateRunner.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -107,19 +108,30 @@
       <recent name="com.andrey" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HibernateRunnerTest.oneToMany">
-    <configuration name="HibernateRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.andrey.HibernateRunner" />
-      <module name="Hibernate_Practice.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.andrey.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.deleteCompany">
+    <configuration name="HibernateRunnerTest.addUserToNewCompany" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.andrey.HibernateRunnerTest.addUserToNewCompany&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="HibernateRunnerTest.checkReflectionApi" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -135,6 +147,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.andrey.HibernateRunnerTest.checkReflectionApi&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="HibernateRunnerTest.deleteCompany" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.andrey.HibernateRunnerTest.deleteCompany&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,28 +205,6 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Hibernate_Practice [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="Hibernate_Practice [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -215,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HibernateRunnerTest.deleteCompany" />
+        <item itemvalue="Gradle.HibernateRunnerTest.addUserToNewCompany" />
         <item itemvalue="Gradle.HibernateRunnerTest.oneToMany" />
         <item itemvalue="Gradle.Hibernate_Practice [dependencies]" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkReflectionApi" />
-        <item itemvalue="Gradle.Hibernate_Practice [clean]" />
-        <item itemvalue="Application.HibernateRunner" />
       </list>
     </recent_temporary>
   </component>
@@ -278,6 +292,7 @@
       <workItem from="1705841688598" duration="1217000" />
       <workItem from="1705850828443" duration="1677000" />
       <workItem from="1705858366161" duration="3635000" />
+      <workItem from="1705862895441" duration="4065000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
