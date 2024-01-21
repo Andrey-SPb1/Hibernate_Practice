@@ -1,10 +1,15 @@
 package com.andrey;
 
 import com.andrey.entity.Birthday;
+import com.andrey.entity.Company;
 import com.andrey.entity.Role;
 import com.andrey.entity.User;
+import com.andrey.util.HibernateUtil;
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
+import lombok.Cleanup;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
@@ -19,12 +24,20 @@ import java.util.stream.Collectors;
 class HibernateRunnerTest {
 
     @Test
+    void oneToMany() {
+        @Cleanup SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+        @Cleanup Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        Company company = session.get(Company.class, 1);
+
+        session.getTransaction().commit();
+    }
+
+    @Test
     void checkReflectionApi() throws SQLException, IllegalAccessException {
         User user = User.builder()
                 .username("ivan123")
-                .firstname("Ivan")
-                .lastname("Ivanov")
-                .birthDay(new Birthday(LocalDate.of(1997, 8, 14)))
                 .age(new Birthday(LocalDate.of(1997, 8, 14)).getAge())
                 .role(Role.ADMIN)
                 .build();

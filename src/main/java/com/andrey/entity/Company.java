@@ -3,7 +3,12 @@ package com.andrey.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+import java.util.Set;
+
 @Entity
+@ToString(exclude = "users")
+@EqualsAndHashCode(exclude = "users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,4 +21,7 @@ public class Company {
 
     @Column(unique = true)
     private String name;
+
+    @OneToMany(mappedBy = "company")
+    private Set<User> users;
 }

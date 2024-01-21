@@ -17,11 +17,11 @@ public class HibernateRunner {
     public static void main(String[] args) {
 
         Company google = Company.builder()
-                .name("Amazon")
+                .name("Facebook")
                 .build();
 
         User user = User.builder()
-                .username("ivan123")
+                .username("ivan1234")
                 .personalInfo(PersonalInfo.builder()
                         .firstname("Ivan")
                         .lastname("Ivanov")
