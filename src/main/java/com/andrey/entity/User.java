@@ -6,7 +6,7 @@ import lombok.*;
 import org.hibernate.annotations.Type;
 
 @Data
-@ToString(exclude = "company")
+@ToString(exclude = {"company", "profile"})
 @EqualsAndHashCode(of = "username")
 @AllArgsConstructor
 @NoArgsConstructor
@@ -39,4 +39,6 @@ public class User {
     @JoinColumn(name = "company_id")
     private Company company;
 
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Profile profile;
 }

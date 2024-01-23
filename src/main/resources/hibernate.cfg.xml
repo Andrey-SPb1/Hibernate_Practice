@@ -13,6 +13,7 @@
 
         <mapping class="com.andrey.entity.User"/>
         <mapping class="com.andrey.entity.Company"/>
+        <mapping class="com.andrey.entity.Profile"/>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
     </session-factory>

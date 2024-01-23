@@ -1,9 +1,6 @@
 package com.andrey;
 
-import com.andrey.entity.Birthday;
-import com.andrey.entity.Company;
-import com.andrey.entity.Role;
-import com.andrey.entity.User;
+import com.andrey.entity.*;
 import com.andrey.util.HibernateUtil;
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
@@ -24,6 +21,30 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 class HibernateRunnerTest {
+
+    @Test
+    void CheckOneToOne() {
+        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+             Session session = sessionFactory.openSession()){
+            session.beginTransaction();
+
+            User user = session.get(User.class, 8L);
+            System.out.println(user.getProfile());
+
+//            User user = User.builder()
+//                    .username("maria@gmail.com")
+//                    .build();
+//            Profile profile = Profile.builder()
+//                    .language("RU")
+//                    .street("Lenina")
+//                    .build();
+//
+//            session.persist(user);
+//            profile.setUser(user);
+
+            session.getTransaction().commit();
+        }
+    }
 
     @Test
     void checkOrhanRemoval() {
@@ -95,6 +116,7 @@ class HibernateRunnerTest {
         session.beginTransaction();
 
         Company company = session.get(Company.class, 1);
+        System.out.println(company);
 
         session.getTransaction().commit();
     }
