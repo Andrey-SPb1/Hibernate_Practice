@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Cascade types with collections">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="LazyInitialisationException">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +72,8 @@
     "Gradle.HibernateRunnerTest.addUserToNewCompany.executor": "Run",
     "Gradle.HibernateRunnerTest.deleteCompany.executor": "Run",
     "Gradle.HibernateRunnerTest.oneToMany.executor": "Debug",
+    "Gradle.HibernateRunnerTest.testLazyInitialisation.executor": "Run",
+    "Gradle.HibernateRunnerTest.testLazyInitialization.executor": "Debug",
     "Gradle.Hibernate_Practice [:HibernateRunner.main()].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -108,7 +109,7 @@
       <recent name="com.andrey" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HibernateRunnerTest.deleteCompany">
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.testLazyInitialization">
     <configuration name="HibernateRunnerTest.addUserToNewCompany" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -123,30 +124,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.andrey.HibernateRunnerTest.addUserToNewCompany&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="HibernateRunnerTest.checkReflectionApi" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.andrey.HibernateRunnerTest.checkReflectionApi&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -205,35 +182,61 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Hibernate_Practice [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HibernateRunnerTest.testLazyInitialisation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="dependencies" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.andrey.HibernateRunnerTest.testLazyInitialisation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="HibernateRunnerTest.testLazyInitialization" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.andrey.HibernateRunnerTest.testLazyInitialization&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HibernateRunnerTest.testLazyInitialization" />
+        <item itemvalue="Gradle.HibernateRunnerTest.testLazyInitialisation" />
         <item itemvalue="Gradle.HibernateRunnerTest.deleteCompany" />
         <item itemvalue="Gradle.HibernateRunnerTest.addUserToNewCompany" />
         <item itemvalue="Gradle.HibernateRunnerTest.oneToMany" />
-        <item itemvalue="Gradle.Hibernate_Practice [dependencies]" />
-        <item itemvalue="Gradle.HibernateRunnerTest.checkReflectionApi" />
       </list>
     </recent_temporary>
   </component>
@@ -292,7 +295,9 @@
       <workItem from="1705841688598" duration="1217000" />
       <workItem from="1705850828443" duration="1677000" />
       <workItem from="1705858366161" duration="3635000" />
-      <workItem from="1705862895441" duration="4960000" />
+      <workItem from="1705862895441" duration="5136000" />
+      <workItem from="1705930686521" duration="1599000" />
+      <workItem from="1706006262131" duration="4011000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -423,7 +428,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705870439651</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Entity equals and hashCode">
+      <option name="closed" value="true" />
+      <created>1705871390390</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1705871390390</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,9 +472,20 @@
     <MESSAGE value="Hibernate proxy" />
     <MESSAGE value="Cascade types" />
     <MESSAGE value="Cascade types with collections" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cascade types with collections" />
+    <MESSAGE value="Entity equals and hashCode" />
+    <MESSAGE value="LazyInitialisationException" />
+    <option name="LAST_COMMIT_MESSAGE" value="LazyInitialisationException" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.andrey.entity.Company" memberName="id" />

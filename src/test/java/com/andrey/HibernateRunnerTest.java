@@ -8,6 +8,7 @@ import com.andrey.util.HibernateUtil;
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
 import lombok.Cleanup;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.Test;
@@ -19,9 +20,27 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 class HibernateRunnerTest {
+
+    @Test
+    void testLazyInitialization() {
+        Company company = null;
+
+        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+             Session session = sessionFactory.openSession()){
+            session.beginTransaction();
+
+            company = session.get(Company.class, 1);
+            Hibernate.initialize(company.getUsers());
+
+            session.getTransaction().commit();
+        }
+        Set<User> users = company.getUsers();
+        System.out.println(users);
+    }
 
     @Test
     void deleteCompany() {
