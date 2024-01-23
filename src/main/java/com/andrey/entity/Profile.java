@@ -14,11 +14,11 @@ import lombok.NoArgsConstructor;
 public class Profile {
 
     @Id
-    @Column(name = "user_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
-    @PrimaryKeyJoinColumn
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
     private User user;
 
     private String street;
@@ -28,6 +28,5 @@ public class Profile {
     public void setUser(User user) {
         user.setProfile(this);
         this.user = user;
-        this.id = user.getId();
     }
 }

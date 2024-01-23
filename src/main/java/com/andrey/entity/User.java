@@ -31,7 +31,7 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-//    @JdbcTypeCode(SqlTypes.JSON)
+    //    @JdbcTypeCode(SqlTypes.JSON)
     @Type(MyJsonType.class)
     private MyJson info;
 
@@ -39,6 +39,10 @@ public class User {
     @JoinColumn(name = "company_id")
     private Company company;
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    @OneToOne(
+            mappedBy = "user",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            optional = false)
     private Profile profile;
 }

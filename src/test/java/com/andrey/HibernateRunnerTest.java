@@ -28,19 +28,19 @@ class HibernateRunnerTest {
              Session session = sessionFactory.openSession()){
             session.beginTransaction();
 
-            User user = session.get(User.class, 8L);
-            System.out.println(user.getProfile());
+            User user = session.get(User.class, 10L);
+            System.out.println(user);
 
 //            User user = User.builder()
-//                    .username("maria@gmail.com")
+//                    .username("max@gmail.com")
 //                    .build();
 //            Profile profile = Profile.builder()
 //                    .language("RU")
 //                    .street("Lenina")
 //                    .build();
 //
-//            session.persist(user);
 //            profile.setUser(user);
+//            session.persist(user);
 
             session.getTransaction().commit();
         }
