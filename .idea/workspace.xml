@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="ManyToMany">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="ManyToMany Separate entity">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Chat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +91,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Frost/IdeaProjects/Hibernate_Practice",
     "node.js.detected.package.eslint": "true",
@@ -142,7 +141,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="HibernateRunnerTest.checkManyToMany" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -166,7 +165,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="HibernateRunnerTest.checkOrhanRemoval" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -190,7 +189,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="HibernateRunnerTest.checkReflectionApi" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -214,7 +213,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="HibernateRunnerTest.testLazyInitialization" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -238,16 +237,16 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
+      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.HibernateRunnerTest.checkManyToMany" />
-        <item itemvalue="Gradle.HibernateRunnerTest.CheckOneToOne" />
+        <item itemvalue="Gradle.HibernateRunnerTest.testLazyInitialization" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkReflectionApi" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkOrhanRemoval" />
-        <item itemvalue="Gradle.HibernateRunnerTest.testLazyInitialization" />
+        <item itemvalue="Gradle.HibernateRunnerTest.CheckOneToOne" />
       </list>
     </recent_temporary>
   </component>
@@ -313,7 +312,20 @@
       <workItem from="1706031125116" duration="4706000" />
       <workItem from="1706040946756" duration="2162000" />
       <workItem from="1706130212963" duration="1623000" />
-      <workItem from="1706179109603" duration="6447000" />
+      <workItem from="1706179109603" duration="6573000" />
+      <workItem from="1706207718364" duration="47000" />
+      <workItem from="1706208428723" duration="1272000" />
+      <workItem from="1706214666282" duration="155000" />
+      <workItem from="1706214862393" duration="63000" />
+      <workItem from="1706214950005" duration="105000" />
+      <workItem from="1706215259282" duration="9000" />
+      <workItem from="1706216270782" duration="74000" />
+      <workItem from="1706216523348" duration="73000" />
+      <workItem from="1706216615697" duration="72000" />
+      <workItem from="1706217148659" duration="983000" />
+      <workItem from="1706218168795" duration="186000" />
+      <workItem from="1706218387393" duration="463000" />
+      <workItem from="1706218882127" duration="744000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -492,7 +504,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706182114583</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="ManyToMany Separate entity">
+      <option name="closed" value="true" />
+      <created>1706185635689</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1706185635689</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Configuration Session Factory" />
     <MESSAGE value="entity" />
     <MESSAGE value="session" />
     <MESSAGE value="type converters" />
@@ -535,7 +554,8 @@
     <MESSAGE value="OneToOne Primary key" />
     <MESSAGE value="OneToOne Foreign key" />
     <MESSAGE value="ManyToMany" />
-    <option name="LAST_COMMIT_MESSAGE" value="ManyToMany" />
+    <MESSAGE value="ManyToMany Separate entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="ManyToMany Separate entity" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
@@ -543,5 +563,9 @@
         <PinnedItemInfo parentTag="com.andrey.entity.Company" memberName="id" />
       </pinned-members>
     </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

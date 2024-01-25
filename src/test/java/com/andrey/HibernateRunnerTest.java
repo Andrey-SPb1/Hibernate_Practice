@@ -85,7 +85,7 @@ class HibernateRunnerTest {
 
     @Test
     void testLazyInitialization() {
-        Company company = null;
+        Company company;
 
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
              Session session = sessionFactory.openSession()) {
