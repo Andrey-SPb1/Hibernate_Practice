@@ -5,8 +5,11 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Type;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Data
-@ToString(exclude = {"company", "profile"})
+@ToString(exclude = {"company", "profile", "chats"})
 @EqualsAndHashCode(of = "username")
 @AllArgsConstructor
 @NoArgsConstructor
@@ -45,4 +48,18 @@ public class User {
             fetch = FetchType.LAZY,
             optional = false)
     private Profile profile;
+
+    @ManyToMany
+    @Builder.Default
+    @JoinTable(
+            name = "users_chat",
+            joinColumns = @JoinColumn(name = "user_id"),
+            inverseJoinColumns = @JoinColumn(name = "chat_id")
+    )
+    private Set<Chat> chats = new HashSet<>();
+
+    public void addChat(Chat chat) {
+        chats.add(chat);
+        chat.getUsers().add(this);
+    }
 }

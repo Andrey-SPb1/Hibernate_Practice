@@ -23,7 +23,27 @@ import java.util.stream.Collectors;
 class HibernateRunnerTest {
 
     @Test
-    void CheckOneToOne() {
+    void checkManyToMany() {
+        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+             Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            User user = session.get(User.class, 10L);
+            user.getChats().clear();
+
+//            Chat chat = Chat.builder()
+//                    .name("test")
+//                    .build();
+//
+//            user.addChat(chat);
+//            session.persist(chat);
+
+            session.getTransaction().commit();
+        }
+    }
+
+    @Test
+    void checkOneToOne() {
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
              Session session = sessionFactory.openSession()){
             session.beginTransaction();
