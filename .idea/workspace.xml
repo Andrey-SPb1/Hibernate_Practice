@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="OneToOne Foreign key">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Chat.java" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="ManyToMany">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Chat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
@@ -312,7 +313,7 @@
       <workItem from="1706031125116" duration="4706000" />
       <workItem from="1706040946756" duration="2162000" />
       <workItem from="1706130212963" duration="1623000" />
-      <workItem from="1706179109603" duration="2834000" />
+      <workItem from="1706179109603" duration="6447000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -483,7 +484,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706043284068</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="ManyToMany">
+      <option name="closed" value="true" />
+      <created>1706182114583</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1706182114583</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +534,8 @@
     <MESSAGE value="OrphanRemoval" />
     <MESSAGE value="OneToOne Primary key" />
     <MESSAGE value="OneToOne Foreign key" />
-    <option name="LAST_COMMIT_MESSAGE" value="OneToOne Foreign key" />
+    <MESSAGE value="ManyToMany" />
+    <option name="LAST_COMMIT_MESSAGE" value="ManyToMany" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

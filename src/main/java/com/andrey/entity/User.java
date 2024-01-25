@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Data
-@ToString(exclude = {"company", "profile", "chats"})
+@ToString(exclude = {"company", "profile", "userChats"})
 @EqualsAndHashCode(of = "username")
 @AllArgsConstructor
 @NoArgsConstructor
@@ -38,7 +38,7 @@ public class User {
     @Type(MyJsonType.class)
     private MyJson info;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
     private Company company;
 
@@ -49,17 +49,8 @@ public class User {
             optional = false)
     private Profile profile;
 
-    @ManyToMany
     @Builder.Default
-    @JoinTable(
-            name = "users_chat",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "chat_id")
-    )
-    private Set<Chat> chats = new HashSet<>();
+    @OneToMany(mappedBy = "user")
+    private Set<UserChat> userChats = new HashSet<>();
 
-    public void addChat(Chat chat) {
-        chats.add(chat);
-        chat.getUsers().add(this);
-    }
 }

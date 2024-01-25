@@ -14,6 +14,7 @@ import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.time.Instant;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Optional;
@@ -29,14 +30,17 @@ class HibernateRunnerTest {
             session.beginTransaction();
 
             User user = session.get(User.class, 10L);
-            user.getChats().clear();
+            Chat chat = session.get(Chat.class, 1L);
 
-//            Chat chat = Chat.builder()
-//                    .name("test")
-//                    .build();
-//
-//            user.addChat(chat);
-//            session.persist(chat);
+            UserChat userChat = UserChat.builder()
+                    .createdAt(Instant.now())
+                    .createdBy(user.getUsername())
+                    .build();
+
+            userChat.setUser(user);
+            userChat.setChat(chat);
+
+            session.persist(userChat);
 
             session.getTransaction().commit();
         }
@@ -45,7 +49,7 @@ class HibernateRunnerTest {
     @Test
     void checkOneToOne() {
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
-             Session session = sessionFactory.openSession()){
+             Session session = sessionFactory.openSession()) {
             session.beginTransaction();
 
             User user = session.get(User.class, 10L);
@@ -69,7 +73,7 @@ class HibernateRunnerTest {
     @Test
     void checkOrhanRemoval() {
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
-             Session session = sessionFactory.openSession()){
+             Session session = sessionFactory.openSession()) {
             session.beginTransaction();
 
             Company company = session.get(Company.class, 1);
@@ -84,7 +88,7 @@ class HibernateRunnerTest {
         Company company = null;
 
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
-             Session session = sessionFactory.openSession()){
+             Session session = sessionFactory.openSession()) {
             session.beginTransaction();
 
             company = session.get(Company.class, 1);
