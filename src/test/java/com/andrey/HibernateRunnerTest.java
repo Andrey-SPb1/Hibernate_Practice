@@ -24,6 +24,22 @@ import java.util.stream.Collectors;
 class HibernateRunnerTest {
 
     @Test
+    void checkH2() {
+        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+             Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            Company company = Company.builder()
+                    .name("Google")
+                    .build();
+
+            session.persist(company);
+
+            session.getTransaction().commit();
+        }
+    }
+
+    @Test
     void checkMapMapping() {
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
              Session session = sessionFactory.openSession()) {

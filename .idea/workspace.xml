@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Collection ordering">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Maps in mappings">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +93,7 @@
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Frost/IdeaProjects/Hibernate_Practice",
+    "last_opened_file_path": "C:/Users/Frost/IdeaProjects/Hibernate_Practice/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -111,6 +112,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Frost\IdeaProjects\Hibernate_Practice\src\test\resources" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -143,6 +147,30 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="HibernateRunnerTest.checkH2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.andrey.HibernateRunnerTest.checkH2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="HibernateRunnerTest.checkLocaleInfo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -165,30 +193,6 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="HibernateRunnerTest.checkManyToMany" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.andrey.HibernateRunnerTest.checkManyToMany&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="HibernateRunnerTest.checkMapMapping" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -242,10 +246,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.HibernateRunnerTest.checkMapMapping" />
+        <item itemvalue="Gradle.HibernateRunnerTest.checkH2" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkCollectionOrdering" />
         <item itemvalue="Gradle.HibernateRunnerTest.save" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkLocaleInfo" />
-        <item itemvalue="Gradle.HibernateRunnerTest.checkManyToMany" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +329,8 @@
       <workItem from="1706218168795" duration="186000" />
       <workItem from="1706218387393" duration="463000" />
       <workItem from="1706218882127" duration="1525000" />
-      <workItem from="1706271191156" duration="7744000" />
+      <workItem from="1706271191156" duration="7794000" />
+      <workItem from="1706300181859" duration="1723000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -533,7 +538,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706280415414</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Maps in mappings">
+      <created>1706282936060</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1706282936060</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +563,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="custom attribute converter" />
     <MESSAGE value="custom user type" />
     <MESSAGE value="first level cache" />
     <MESSAGE value="entity lifecycle" />
@@ -576,7 +587,8 @@
     <MESSAGE value="PersistentBag" />
     <MESSAGE value="ElementCollection" />
     <MESSAGE value="Collection ordering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Collection ordering" />
+    <MESSAGE value="Maps in mappings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Maps in mappings" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
