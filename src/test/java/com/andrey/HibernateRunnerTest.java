@@ -24,13 +24,28 @@ import java.util.stream.Collectors;
 class HibernateRunnerTest {
 
     @Test
+    void checkMapMapping() {
+        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+             Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            Company company = session.get(Company.class, 1L);
+            String englishDescription = company.getLocales().get("en");
+
+            System.out.println(englishDescription);
+
+            session.getTransaction().commit();
+        }
+    }
+
+    @Test
     void checkCollectionOrdering() {
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
              Session session = sessionFactory.openSession()) {
             session.beginTransaction();
 
             Company company = session.get(Company.class, 1L);
-            company.getUsers().forEach(System.out::println);
+            company.getUsers().forEach((k, v) -> System.out.println(v));
 
             session.getTransaction().commit();
         }
@@ -43,8 +58,8 @@ class HibernateRunnerTest {
             session.beginTransaction();
 
             Company company = session.get(Company.class, 1L);
-            company.getLocales().add(LocalInfo.of("ru", "Описание на русском"));
-            company.getLocales().add(LocalInfo.of("en", "English description"));
+//            company.getLocales().add(LocalInfo.of("ru", "Описание на русском"));
+//            company.getLocales().add(LocalInfo.of("en", "English description"));
 
             session.getTransaction().commit();
         }
@@ -104,7 +119,7 @@ class HibernateRunnerTest {
             session.beginTransaction();
 
             Company company = session.get(Company.class, 1);
-            company.getUsers().removeIf(user -> user.getId().equals(4L));
+//            company.getUsers().removeIf(user -> user.getId().equals(4L));
 
             session.getTransaction().commit();
         }
@@ -123,8 +138,8 @@ class HibernateRunnerTest {
 
             session.getTransaction().commit();
         }
-        Set<User> users = company.getUsers();
-        System.out.println(users);
+//        Set<User> users = company.getUsers();
+//        System.out.println(users);
     }
 
     @Test

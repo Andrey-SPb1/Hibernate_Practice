@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="ElementCollection">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Collection ordering">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
@@ -118,7 +118,7 @@
       <recent name="com.andrey" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkCollectionOrdering">
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkMapMapping">
     <configuration name="HibernateRunnerTest.checkCollectionOrdering" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -191,7 +191,7 @@
       <ForceTestExec>false</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="HibernateRunnerTest.checkReflectionApi" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HibernateRunnerTest.checkMapMapping" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -204,7 +204,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.andrey.HibernateRunnerTest.checkReflectionApi&quot;" />
+            <option value="&quot;com.andrey.HibernateRunnerTest.checkMapMapping&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -212,10 +212,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="HibernateRunnerTest.testLazyInitialization" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HibernateRunnerTest.save" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -228,7 +228,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.andrey.HibernateRunnerTest.testLazyInitialization&quot;" />
+            <option value="&quot;com.andrey.HibernateRunnerTest.save&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -236,16 +236,16 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HibernateRunnerTest.checkMapMapping" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkCollectionOrdering" />
+        <item itemvalue="Gradle.HibernateRunnerTest.save" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkLocaleInfo" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkManyToMany" />
-        <item itemvalue="Gradle.HibernateRunnerTest.testLazyInitialization" />
-        <item itemvalue="Gradle.HibernateRunnerTest.checkReflectionApi" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +325,7 @@
       <workItem from="1706218168795" duration="186000" />
       <workItem from="1706218387393" duration="463000" />
       <workItem from="1706218882127" duration="1525000" />
-      <workItem from="1706271191156" duration="5557000" />
+      <workItem from="1706271191156" duration="7744000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -526,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706276982391</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Collection ordering">
+      <created>1706280415414</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1706280415414</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -544,7 +551,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="type converters" />
     <MESSAGE value="custom attribute converter" />
     <MESSAGE value="custom user type" />
     <MESSAGE value="first level cache" />
@@ -569,7 +575,8 @@
     <MESSAGE value="ManyToMany Separate entity" />
     <MESSAGE value="PersistentBag" />
     <MESSAGE value="ElementCollection" />
-    <option name="LAST_COMMIT_MESSAGE" value="ElementCollection" />
+    <MESSAGE value="Collection ordering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Collection ordering" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

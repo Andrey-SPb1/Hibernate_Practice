@@ -3,10 +3,7 @@ package com.andrey.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @ToString(exclude = "users")
@@ -26,16 +23,18 @@ public class Company {
 
     @Builder.Default
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)
-    @OrderBy(value = "username DESC, personalInfo.firstname ASC")
-    private Set<User> users = new HashSet<>();
+    @MapKey(name = "username")
+    private Map<String, User> users = new HashMap<>();
 
     @Builder.Default
     @ElementCollection
     @CollectionTable(name = "company_locale", joinColumns = @JoinColumn(name = "company_id"))
-    private List<LocalInfo> locales = new ArrayList<>();
+    @Column(name = "description")
+    @MapKeyColumn(name = "lang")
+    private Map<String, String> locales = new HashMap<>();
 
     public void addUser(User user) {
-        users.add(user);
+        users.put(user.getUsername(), user);
         user.setCompany(this);
     }
 }
