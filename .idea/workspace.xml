@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="ManyToMany Separate entity">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="PersistentBag">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/LocalInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Chat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Language Defaults",
+    "settings.editor.selected.configurable": "database.data.views",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -119,8 +119,8 @@
       <recent name="com.andrey" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkManyToMany">
-    <configuration name="HibernateRunnerTest.CheckOneToOne" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkLocaleInfo">
+    <configuration name="HibernateRunnerTest.checkLocaleInfo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -133,7 +133,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.andrey.HibernateRunnerTest.CheckOneToOne&quot;" />
+            <option value="&quot;com.andrey.HibernateRunnerTest.checkLocaleInfo&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -141,7 +141,7 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
     <configuration name="HibernateRunnerTest.checkManyToMany" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -242,11 +242,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HibernateRunnerTest.checkLocaleInfo" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkManyToMany" />
         <item itemvalue="Gradle.HibernateRunnerTest.testLazyInitialization" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkReflectionApi" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkOrhanRemoval" />
-        <item itemvalue="Gradle.HibernateRunnerTest.CheckOneToOne" />
       </list>
     </recent_temporary>
   </component>
@@ -325,7 +325,8 @@
       <workItem from="1706217148659" duration="983000" />
       <workItem from="1706218168795" duration="186000" />
       <workItem from="1706218387393" duration="463000" />
-      <workItem from="1706218882127" duration="744000" />
+      <workItem from="1706218882127" duration="1525000" />
+      <workItem from="1706271191156" duration="3733000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -512,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706185635689</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="PersistentBag">
+      <created>1706219774590</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1706219774590</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,7 +538,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="entity" />
     <MESSAGE value="session" />
     <MESSAGE value="type converters" />
     <MESSAGE value="custom attribute converter" />
@@ -555,7 +562,8 @@
     <MESSAGE value="OneToOne Foreign key" />
     <MESSAGE value="ManyToMany" />
     <MESSAGE value="ManyToMany Separate entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="ManyToMany Separate entity" />
+    <MESSAGE value="PersistentBag" />
+    <option name="LAST_COMMIT_MESSAGE" value="PersistentBag" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
