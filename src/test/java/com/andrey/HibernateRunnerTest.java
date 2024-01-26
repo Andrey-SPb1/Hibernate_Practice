@@ -24,6 +24,19 @@ import java.util.stream.Collectors;
 class HibernateRunnerTest {
 
     @Test
+    void checkCollectionOrdering() {
+        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+             Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            Company company = session.get(Company.class, 1L);
+            company.getUsers().forEach(System.out::println);
+
+            session.getTransaction().commit();
+        }
+    }
+
+    @Test
     void checkLocaleInfo() {
         try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
              Session session = sessionFactory.openSession()) {

@@ -26,6 +26,7 @@ public class Company {
 
     @Builder.Default
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OrderBy(value = "username DESC, personalInfo.firstname ASC")
     private Set<User> users = new HashSet<>();
 
     @Builder.Default
