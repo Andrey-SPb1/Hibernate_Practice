@@ -1,6 +1,7 @@
 package com.andrey;
 
 import com.andrey.entity.*;
+import com.andrey.util.HibernateTestUtil;
 import com.andrey.util.HibernateUtil;
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
@@ -18,14 +19,13 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Optional;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 class HibernateRunnerTest {
 
     @Test
     void checkH2() {
-        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+        try (SessionFactory sessionFactory = HibernateTestUtil.buildSessionFactory();
              Session session = sessionFactory.openSession()) {
             session.beginTransaction();
 

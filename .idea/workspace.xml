@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Maps in mappings">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="In-Memory database. H2">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/andrey/util/HibernateTestUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +123,7 @@
       <recent name="com.andrey" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkMapMapping">
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkH2">
     <configuration name="HibernateRunnerTest.checkCollectionOrdering" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -245,8 +246,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.HibernateRunnerTest.checkMapMapping" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkH2" />
+        <item itemvalue="Gradle.HibernateRunnerTest.checkMapMapping" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkCollectionOrdering" />
         <item itemvalue="Gradle.HibernateRunnerTest.save" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkLocaleInfo" />
@@ -330,7 +331,7 @@
       <workItem from="1706218387393" duration="463000" />
       <workItem from="1706218882127" duration="1525000" />
       <workItem from="1706271191156" duration="7794000" />
-      <workItem from="1706300181859" duration="1723000" />
+      <workItem from="1706300181859" duration="4007000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -545,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706282936060</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="In-Memory database. H2">
+      <created>1706302134838</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1706302134838</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,7 +571,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="custom user type" />
     <MESSAGE value="first level cache" />
     <MESSAGE value="entity lifecycle" />
     <MESSAGE value="log4j" />
@@ -588,7 +595,8 @@
     <MESSAGE value="ElementCollection" />
     <MESSAGE value="Collection ordering" />
     <MESSAGE value="Maps in mappings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maps in mappings" />
+    <MESSAGE value="In-Memory database. H2" />
+    <option name="LAST_COMMIT_MESSAGE" value="In-Memory database. H2" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
