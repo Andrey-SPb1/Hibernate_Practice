@@ -90,15 +90,15 @@ class HibernateRunnerTest {
             User user = session.get(User.class, 10L);
             Chat chat = session.get(Chat.class, 1L);
 
-            UserChat userChat = UserChat.builder()
-                    .createdAt(Instant.now())
-                    .createdBy(user.getUsername())
-                    .build();
+//            UserChat userChat = UserChat.builder()
+//                    .createdAt(Instant.now())
+//                    .createdBy(user.getUsername())
+//                    .build();
 
-            userChat.setUser(user);
-            userChat.setChat(chat);
-
-            session.persist(userChat);
+//            userChat.setUser(user);
+//            userChat.setChat(chat);
+//
+//            session.persist(userChat);
 
             session.getTransaction().commit();
         }
