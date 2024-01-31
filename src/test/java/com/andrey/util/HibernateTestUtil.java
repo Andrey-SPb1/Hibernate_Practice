@@ -20,7 +20,7 @@ public class HibernateTestUtil {
     public static SessionFactory buildSessionFactory() {
         Configuration configuration = new Configuration();
         configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy());
-        configuration.addAnnotatedClass(User.class);
+//        configuration.addAnnotatedClass(User.class);
         configuration.addAttributeConverter(new BirthdayConverter());
 
         configuration.setProperty("hibernate.connection.url", postgres.getJdbcUrl());

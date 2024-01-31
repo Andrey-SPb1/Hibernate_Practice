@@ -15,7 +15,6 @@ import java.lang.reflect.Field;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.time.Instant;
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.Optional;
@@ -29,11 +28,30 @@ class HibernateRunnerTest {
              Session session = sessionFactory.openSession()) {
             session.beginTransaction();
 
-            Company company = Company.builder()
+            Company google = Company.builder()
                     .name("Google")
                     .build();
+            session.persist(google);
 
-            session.persist(company);
+            Programmer programmer = Programmer.builder()
+                    .username("ivan@gmail.com")
+                    .language(Language.JAVA)
+                    .company(google)
+                    .build();
+            session.persist(programmer);
+
+            Manager manager = Manager.builder()
+                    .username("sveta@gmail.com")
+                    .projectName("Starter")
+                    .company(google)
+                    .build();
+            session.persist(manager);
+
+            session.flush();
+            session.clear();
+
+            Programmer programmer1 = session.get(Programmer.class, 1L);
+            User manager1 = session.get(User.class, 2L);
 
             session.getTransaction().commit();
         }
@@ -176,15 +194,15 @@ class HibernateRunnerTest {
         @Cleanup Session session = sessionFactory.openSession();
         session.beginTransaction();
 
-        User user = User.builder()
-                .username("sveta123")
-                .build();
+//        User user = User.builder()
+//                .username("sveta123")
+//                .build();
 
         Company company = Company.builder()
                 .name("Nvidia")
                 .build();
 
-        company.addUser(user);
+//        company.addUser(user);
 
         session.persist(company);
 
@@ -205,11 +223,7 @@ class HibernateRunnerTest {
 
     @Test
     void checkReflectionApi() throws SQLException, IllegalAccessException {
-        User user = User.builder()
-                .username("ivan123")
-                .age(new Birthday(LocalDate.of(1997, 8, 14)).getAge())
-                .role(Role.ADMIN)
-                .build();
+        User user = null;
 
         String sql = """
                 insert

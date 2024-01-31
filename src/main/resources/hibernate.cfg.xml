@@ -16,6 +16,8 @@
         <mapping class="com.andrey.entity.Profile"/>
         <mapping class="com.andrey.entity.Chat"/>
         <mapping class="com.andrey.entity.UserChat"/>
+        <mapping class="com.andrey.entity.Programmer"/>
+        <mapping class="com.andrey.entity.Manager"/>
         <!-- DB schema will be updated if needed -->
         <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
     </session-factory>
