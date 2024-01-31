@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="MappedSuperclass">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Language.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Manager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Programmer.java" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="TABLE_PER_CLASS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Programmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Programmer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/util/HibernateTestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/util/HibernateTestUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,7 +336,8 @@
       <workItem from="1706271191156" duration="7794000" />
       <workItem from="1706300181859" duration="4546000" />
       <workItem from="1706357125532" duration="4977000" />
-      <workItem from="1706704455637" duration="5271000" />
+      <workItem from="1706704455637" duration="5513000" />
+      <workItem from="1706738896545" duration="2986000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -578,7 +573,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706362378598</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="TABLE_PER_CLASS">
+      <created>1706711300013</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1706711300013</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -596,7 +598,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="log4j" />
     <MESSAGE value="Rolling File Appender" />
     <MESSAGE value="Embedded components" />
     <MESSAGE value="Primary keys" />
@@ -621,7 +622,8 @@
     <MESSAGE value="In-Memory database. H2" />
     <MESSAGE value="Docker testcontainers" />
     <MESSAGE value="MappedSuperclass" />
-    <option name="LAST_COMMIT_MESSAGE" value="MappedSuperclass" />
+    <MESSAGE value="TABLE_PER_CLASS" />
+    <option name="LAST_COMMIT_MESSAGE" value="TABLE_PER_CLASS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -629,7 +631,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java</url>
           <line>52</line>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

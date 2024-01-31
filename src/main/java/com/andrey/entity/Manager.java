@@ -1,6 +1,7 @@
 package com.andrey.entity;
 
 
+import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,6 +14,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@DiscriminatorValue("manager")
 public class Manager extends User {
 
     private String ProjectName;
