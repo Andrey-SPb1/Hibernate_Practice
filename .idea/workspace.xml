@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="TABLE_PER_CLASS">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="SINGLE_TABLE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Programmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Programmer.java" afterDir="false" />
@@ -54,6 +54,19 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c5223f0d-aa66-4ad8-9553-5c48db3a772f" />
+        <option name="url" value="https://github.com/Andrey-SPb1/Hibernate_Practice.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.hibernate.orm/hibernate-core/6.4.1.Final/171ca1a8bf525d8a719edd23f919e8527bc8003/hibernate-core-6.4.1.Final-sources.jar!/org/hibernate/Hibernate.java" root0="SKIP_INSPECTION" />
@@ -337,7 +350,9 @@
       <workItem from="1706300181859" duration="4546000" />
       <workItem from="1706357125532" duration="4977000" />
       <workItem from="1706704455637" duration="5513000" />
-      <workItem from="1706738896545" duration="2986000" />
+      <workItem from="1706738896545" duration="3163000" />
+      <workItem from="1706742188572" duration="96000" />
+      <workItem from="1706807183174" duration="1405000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -580,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706711300013</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="SINGLE_TABLE">
+      <created>1706741998202</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1706741998202</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,7 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Rolling File Appender" />
     <MESSAGE value="Embedded components" />
     <MESSAGE value="Primary keys" />
     <MESSAGE value="EmbeddedId" />
@@ -623,7 +644,8 @@
     <MESSAGE value="Docker testcontainers" />
     <MESSAGE value="MappedSuperclass" />
     <MESSAGE value="TABLE_PER_CLASS" />
-    <option name="LAST_COMMIT_MESSAGE" value="TABLE_PER_CLASS" />
+    <MESSAGE value="SINGLE_TABLE" />
+    <option name="LAST_COMMIT_MESSAGE" value="SINGLE_TABLE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
