@@ -8,6 +8,10 @@ import org.hibernate.annotations.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedQuery(name = "findUserByName", query = "select u from User u " +
+        "join u.company c " +
+        "where u.personalInfo.firstname = :firstname and c.name = :companyName " +
+        "order by u.personalInfo.lastname desc ")
 @Data
 @ToString(exclude = {"company", "profile", "userChats"})
 @EqualsAndHashCode(of = "username")
@@ -48,7 +52,7 @@ public abstract class User implements BaseEntity<Long> {
             fetch = FetchType.LAZY)
     private Profile profile;
 
-//    @Builder.Default
+    //    @Builder.Default
     @OneToMany(mappedBy = "user")
     private List<UserChat> userChats = new ArrayList<>();
 

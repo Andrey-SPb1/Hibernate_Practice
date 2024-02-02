@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="JOINED">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -352,6 +353,9 @@
       <workItem from="1706742188572" duration="96000" />
       <workItem from="1706807183174" duration="2167000" />
       <workItem from="1706880633583" duration="1978000" />
+      <workItem from="1706883111174" duration="44000" />
+      <workItem from="1706883276926" duration="74000" />
+      <workItem from="1706904963474" duration="1218000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>

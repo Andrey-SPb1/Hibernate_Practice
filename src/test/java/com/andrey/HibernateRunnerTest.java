@@ -4,11 +4,13 @@ import com.andrey.entity.*;
 import com.andrey.util.HibernateTestUtil;
 import com.andrey.util.HibernateUtil;
 import jakarta.persistence.Column;
+import jakarta.persistence.FlushModeType;
 import jakarta.persistence.Table;
 import lombok.Cleanup;
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.annotations.QueryHints;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
@@ -31,15 +33,19 @@ class HibernateRunnerTest {
 
             String company = "Google";
             String name = "Ivan";
-            List<User> result = session.createQuery(
-                            "select u from User u " +
-                                    "join u.company c " +
-                                    "where u.personalInfo.firstname = :firstname and c.name = :companyName " +
-                                    "order by u.personalInfo.lastname desc ",
+            List<User> result = session.createNamedQuery(
+                            "findUserByName",
                             User.class)
                     .setParameter("firstname", name)
                     .setParameter("companyName", company)
+                    .setFlushMode(FlushModeType.COMMIT)
+                    .setHint(QueryHints.FETCH_SIZE, "50")
                     .list();
+
+            int countRows = session.createQuery("update User u set u.role = 'ADMIN' ")
+                    .executeUpdate();
+
+            session.createNativeQuery("select u.* from User u where u.firstname = 'Ivan' ", User.class);
 
             session.getTransaction().commit();
         }
