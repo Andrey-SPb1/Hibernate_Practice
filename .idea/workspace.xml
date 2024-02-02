@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="SINGLE_TABLE">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="JOINED">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Programmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Programmer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +137,7 @@
       <recent name="com.andrey" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkH2">
+  <component name="RunManager" selected="Gradle.HibernateRunnerTest.checkHQL">
     <configuration name="HibernateRunnerTest.checkCollectionOrdering" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -188,7 +186,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="HibernateRunnerTest.checkLocaleInfo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="HibernateRunnerTest.checkHQL" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -201,7 +199,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.andrey.HibernateRunnerTest.checkLocaleInfo&quot;" />
+            <option value="&quot;com.andrey.HibernateRunnerTest.checkHQL&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -262,11 +260,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HibernateRunnerTest.checkHQL" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkH2" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkMapMapping" />
         <item itemvalue="Gradle.HibernateRunnerTest.checkCollectionOrdering" />
         <item itemvalue="Gradle.HibernateRunnerTest.save" />
-        <item itemvalue="Gradle.HibernateRunnerTest.checkLocaleInfo" />
       </list>
     </recent_temporary>
   </component>
@@ -352,7 +350,8 @@
       <workItem from="1706704455637" duration="5513000" />
       <workItem from="1706738896545" duration="3163000" />
       <workItem from="1706742188572" duration="96000" />
-      <workItem from="1706807183174" duration="1405000" />
+      <workItem from="1706807183174" duration="2167000" />
+      <workItem from="1706880633583" duration="1978000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -602,7 +601,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706741998202</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="JOINED">
+      <created>1706809571994</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1706809571994</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -620,7 +626,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Embedded components" />
     <MESSAGE value="Primary keys" />
     <MESSAGE value="EmbeddedId" />
     <MESSAGE value="ManyToOne" />
@@ -645,18 +650,10 @@
     <MESSAGE value="MappedSuperclass" />
     <MESSAGE value="TABLE_PER_CLASS" />
     <MESSAGE value="SINGLE_TABLE" />
-    <option name="LAST_COMMIT_MESSAGE" value="SINGLE_TABLE" />
+    <MESSAGE value="JOINED" />
+    <option name="LAST_COMMIT_MESSAGE" value="JOINED" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.andrey.entity.Company" memberName="id" />

@@ -17,10 +17,33 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 class HibernateRunnerTest {
+
+    @Test
+    void checkHQL() {
+        try (SessionFactory sessionFactory = HibernateTestUtil.buildSessionFactory();
+             Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            String company = "Google";
+            String name = "Ivan";
+            List<User> result = session.createQuery(
+                            "select u from User u " +
+                                    "join u.company c " +
+                                    "where u.personalInfo.firstname = :firstname and c.name = :companyName " +
+                                    "order by u.personalInfo.lastname desc ",
+                            User.class)
+                    .setParameter("firstname", name)
+                    .setParameter("companyName", company)
+                    .list();
+
+            session.getTransaction().commit();
+        }
+    }
 
     @Test
     void checkH2() {
