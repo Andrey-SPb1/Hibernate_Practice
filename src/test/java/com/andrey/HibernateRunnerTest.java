@@ -45,42 +45,21 @@ class HibernateRunnerTest {
             int countRows = session.createQuery("update User u set u.role = 'ADMIN' ")
                     .executeUpdate();
 
-            session.createNativeQuery("select u.* from User u where u.firstname = 'Ivan' ", User.class);
-
-            session.getTransaction().commit();
-        }
-    }
-
-    @Test
-    void checkH2() {
-        try (SessionFactory sessionFactory = HibernateTestUtil.buildSessionFactory();
-             Session session = sessionFactory.openSession()) {
-            session.beginTransaction();
-
-            Company google = Company.builder()
-                    .name("Google")
-                    .build();
-            session.persist(google);
-
-            Programmer programmer = Programmer.builder()
+            User user = User.builder()
                     .username("ivan@gmail.com")
-                    .language(Language.JAVA)
-                    .company(google)
+                    .personalInfo(PersonalInfo.builder()
+                            .firstname("Ivan")
+                            .lastname("Ivanov")
+                            .build())
                     .build();
-            session.persist(programmer);
+            session.persist(user);
 
-            Manager manager = Manager.builder()
-                    .username("sveta@gmail.com")
-                    .projectName("Starter")
-                    .company(google)
-                    .build();
-            session.persist(manager);
+            User result1 = session.createQuery("select u from User u where u.personalInfo.firstname = 'Ivan' ", User.class)
+                    .getSingleResult();
 
-            session.flush();
-            session.clear();
+            System.out.println(result1.fullName());
 
-            Programmer programmer1 = session.get(Programmer.class, 1L);
-            User manager1 = session.get(User.class, 2L);
+            session.createNativeQuery("select * from Payment where id = 1");
 
             session.getTransaction().commit();
         }

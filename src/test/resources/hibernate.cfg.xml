@@ -15,7 +15,6 @@
         <mapping class="com.andrey.entity.Profile"/>
         <mapping class="com.andrey.entity.Chat"/>
         <mapping class="com.andrey.entity.UserChat"/>
-        <mapping class="com.andrey.entity.Programmer"/>
-        <mapping class="com.andrey.entity.Manager"/>
+        <mapping class="com.andrey.entity.Payment"/>
     </session-factory>
 </hibernate-configuration>

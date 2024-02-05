@@ -29,6 +29,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
 //    testImplementation 'com.h2database:h2:2.2.224'
     testImplementation 'org.testcontainers:postgresql:1.19.4'
+    testImplementation 'org.assertj:assertj-core:3.25.2'
 }
 
 test {

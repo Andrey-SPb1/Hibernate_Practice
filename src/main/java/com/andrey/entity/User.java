@@ -13,20 +13,20 @@ import java.util.List;
         "where u.personalInfo.firstname = :firstname and c.name = :companyName " +
         "order by u.personalInfo.lastname desc ")
 @Data
+@Builder
 @ToString(exclude = {"company", "profile", "userChats"})
 @EqualsAndHashCode(of = "username")
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "users", schema = "public")
-@Inheritance(strategy = InheritanceType.JOINED)
-public abstract class User implements BaseEntity<Long> {
+public class User implements BaseEntity<Long>, Comparable<User> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @AttributeOverride(name = "birthDay", column = @Column(name = "birth_day"))
+    @AttributeOverride(name = "birthDate", column = @Column(name = "birth_date"))
     private PersonalInfo personalInfo;
 
     @Column(unique = true)
@@ -52,8 +52,20 @@ public abstract class User implements BaseEntity<Long> {
             fetch = FetchType.LAZY)
     private Profile profile;
 
-    //    @Builder.Default
+    @Builder.Default
     @OneToMany(mappedBy = "user")
     private List<UserChat> userChats = new ArrayList<>();
 
+    @Builder.Default
+    @OneToMany(mappedBy = "receiver")
+    private List<Payment> payments = new ArrayList<>();
+
+    @Override
+    public int compareTo(User o) {
+        return username.compareTo(o.username);
+    }
+
+    public String fullName() {
+        return getPersonalInfo().getFirstname() + " " + getPersonalInfo().getLastname();
+    }
 }

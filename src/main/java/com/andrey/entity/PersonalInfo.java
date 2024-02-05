@@ -21,6 +21,6 @@ public class PersonalInfo implements Serializable {
 
     private String firstname;
     private String lastname;
-    private Birthday birthDay;
+    private Birthday birthDate;
 
 }
