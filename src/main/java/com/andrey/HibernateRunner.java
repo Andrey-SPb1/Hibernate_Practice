@@ -1,15 +1,10 @@
 package com.andrey;
 
-import com.andrey.entity.Birthday;
 import com.andrey.entity.Company;
-import com.andrey.entity.PersonalInfo;
-import com.andrey.entity.User;
 import com.andrey.util.HibernateUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-
-import java.time.LocalDate;
 
 @Slf4j
 public class HibernateRunner {

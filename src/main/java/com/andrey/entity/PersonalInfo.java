@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.time.LocalDate;
 
 @Builder
 @AllArgsConstructor
@@ -21,6 +22,6 @@ public class PersonalInfo implements Serializable {
 
     private String firstname;
     private String lastname;
-    private Birthday birthDate;
+    private LocalDate birthDate;
 
 }

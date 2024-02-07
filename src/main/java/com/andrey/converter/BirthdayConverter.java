@@ -1,6 +1,6 @@
 package com.andrey.converter;
 
-import com.andrey.entity.Birthday;
+import com.andrey.entity.Birthdate;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
@@ -8,20 +8,20 @@ import java.sql.Date;
 import java.util.Optional;
 
 @Converter(autoApply = true)
-public class BirthdayConverter implements AttributeConverter<Birthday, Date> {
+public class BirthdayConverter implements AttributeConverter<Birthdate, Date> {
     @Override
-    public Date convertToDatabaseColumn(Birthday attribute) {
+    public Date convertToDatabaseColumn(Birthdate attribute) {
         return Optional.ofNullable(attribute)
-                .map(Birthday::birthDate)
+                .map(Birthdate::birthDate)
                 .map(Date::valueOf)
                 .orElse(null);
     }
 
     @Override
-    public Birthday convertToEntityAttribute(Date dbData) {
+    public Birthdate convertToEntityAttribute(Date dbData) {
         return Optional.ofNullable(dbData)
                 .map(Date::toLocalDate)
-                .map(Birthday::new)
+                .map(Birthdate::new)
                 .orElse(null);
     }
 }
