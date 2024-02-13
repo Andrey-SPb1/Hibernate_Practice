@@ -4,18 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="HQL. Practice">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dto/CompanyDto.java" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Criteria API">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/converter/BirthdayConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/converter/BirthdayConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Birthday.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Birthdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/AuditableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/AuditableEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Chat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/LocalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/LocalInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/PersonalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/PersonalInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/type/MyJsonType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/HibernateRunnerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/dao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/dao/UserDaoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/util/TestDataImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/util/TestDataImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/util/HibernateTestUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/util/HibernateTestUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +63,7 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="Hibernate_Practice" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="verification" type="c8890929:TasksNode$1" />
+                <item name="querydsl" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -110,44 +118,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.HibernateRunnerTest.CheckOneToOne.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.HibernateRunnerTest.addUserToNewCompany.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HibernateRunnerTest.checkManyToMany.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HibernateRunnerTest.checkOrhanRemoval.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HibernateRunnerTest.checkReflectionApi.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HibernateRunnerTest.deleteCompany.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HibernateRunnerTest.oneToMany.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.HibernateRunnerTest.testLazyInitialisation.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.HibernateRunnerTest.testLazyInitialization.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Hibernate_Practice [:HibernateRunner.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Frost/IdeaProjects/Hours&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;database.data.views&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.HibernateRunnerTest.CheckOneToOne.executor": "Debug",
+    "Gradle.HibernateRunnerTest.addUserToNewCompany.executor": "Run",
+    "Gradle.HibernateRunnerTest.checkManyToMany.executor": "Run",
+    "Gradle.HibernateRunnerTest.checkOrhanRemoval.executor": "Run",
+    "Gradle.HibernateRunnerTest.checkReflectionApi.executor": "Run",
+    "Gradle.HibernateRunnerTest.deleteCompany.executor": "Run",
+    "Gradle.HibernateRunnerTest.oneToMany.executor": "Debug",
+    "Gradle.HibernateRunnerTest.testLazyInitialisation.executor": "Run",
+    "Gradle.HibernateRunnerTest.testLazyInitialization.executor": "Run",
+    "Gradle.Hibernate_Practice [:HibernateRunner.main()].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Frost/IdeaProjects/Hours",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.andrey.entity" />
@@ -255,7 +263,7 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="UserDaoTest.findLimitedUsersOrderedByBirthday" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserDaoTest.findCompanyNamesWithAvgUserPaymentsOrderedByCompanyName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -268,7 +276,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.andrey.dao.UserDaoTest.findLimitedUsersOrderedByBirthday&quot;" />
+            <option value="&quot;com.andrey.dao.UserDaoTest.findCompanyNamesWithAvgUserPaymentsOrderedByCompanyName&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -282,10 +290,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.UserDaoTest" />
+        <item itemvalue="Gradle.UserDaoTest.findCompanyNamesWithAvgUserPaymentsOrderedByCompanyName" />
+        <item itemvalue="Gradle.UserDaoTest.findAll" />
         <item itemvalue="Gradle.Hibernate_Practice [classes]" />
         <item itemvalue="Gradle.Hibernate_Practice [clean]" />
-        <item itemvalue="Gradle.UserDaoTest.findAll" />
-        <item itemvalue="Gradle.UserDaoTest.findLimitedUsersOrderedByBirthday" />
       </list>
     </recent_temporary>
   </component>
@@ -385,7 +393,14 @@
       <workItem from="1707134338508" duration="9356000" />
       <workItem from="1707152456518" duration="1197000" />
       <workItem from="1707158835473" duration="1097000" />
-      <workItem from="1707318109265" duration="11336000" />
+      <workItem from="1707318109265" duration="12735000" />
+      <workItem from="1707674005502" duration="2663000" />
+      <workItem from="1707676757861" duration="1087000" />
+      <workItem from="1707681269939" duration="6791000" />
+      <workItem from="1707688145619" duration="5303000" />
+      <workItem from="1707732440462" duration="5165000" />
+      <workItem from="1707738087427" duration="4066000" />
+      <workItem from="1707831809279" duration="4198000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -656,7 +671,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707143755309</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Criteria API">
+      <created>1707332664595</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1707332664595</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -674,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ManyToOne" />
     <MESSAGE value="Fetch types" />
     <MESSAGE value="Hibernate proxy" />
     <MESSAGE value="Cascade types" />
@@ -699,7 +720,8 @@
     <MESSAGE value="JOINED" />
     <MESSAGE value="HQL. Part 2" />
     <MESSAGE value="HQL. Practice" />
-    <option name="LAST_COMMIT_MESSAGE" value="HQL. Practice" />
+    <MESSAGE value="Criteria API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criteria API" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -1,7 +1,6 @@
 package com.andrey.entity;
 
-import com.andrey.type.MyJsonType;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Type;
 
@@ -37,10 +36,6 @@ public class User implements BaseEntity<Long>, Comparable<User> {
 
     @Enumerated(EnumType.STRING)
     private Role role;
-
-    //    @JdbcTypeCode(SqlTypes.JSON)
-    @Type(MyJsonType.class)
-    private MyJson info;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")

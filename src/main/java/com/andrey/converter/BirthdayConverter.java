@@ -1,8 +1,8 @@
 package com.andrey.converter;
 
 import com.andrey.entity.Birthdate;
-import jakarta.persistence.AttributeConverter;
-import jakarta.persistence.Converter;
+import javax.persistence.AttributeConverter;
+import javax.persistence.Converter;
 
 import java.sql.Date;
 import java.util.Optional;

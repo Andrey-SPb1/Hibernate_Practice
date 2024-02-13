@@ -4,8 +4,8 @@ import com.andrey.converter.BirthdayConverter;
 import com.andrey.entity.User;
 import lombok.experimental.UtilityClass;
 import org.hibernate.SessionFactory;
-import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy;
 import org.testcontainers.containers.PostgreSQLContainer;
 
 @UtilityClass

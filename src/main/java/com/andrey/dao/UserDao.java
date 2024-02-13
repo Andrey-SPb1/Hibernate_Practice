@@ -2,16 +2,19 @@ package com.andrey.dao;
 
 import com.andrey.dto.CompanyDto;
 import com.andrey.entity.*;
-import jakarta.persistence.Tuple;
-import jakarta.persistence.criteria.JoinType;
-import jakarta.persistence.criteria.Predicate;
+
+import com.querydsl.core.Tuple;
+import com.querydsl.jpa.impl.JPAQuery;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import org.hibernate.Session;
-import org.hibernate.query.criteria.*;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+
+import static com.andrey.entity.QCompany.company;
+import static com.andrey.entity.QPayment.*;
+import static com.andrey.entity.QUser.*;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserDao {
@@ -25,15 +28,10 @@ public class UserDao {
 //        return session.createQuery("select u from User u", User.class)
 //                .list();
 
-        HibernateCriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-
-        JpaCriteriaQuery<User> criteria = criteriaBuilder.createQuery(User.class);
-        JpaRoot<User> user = criteria.from(User.class);
-
-        criteria.select(user);
-
-        return session.createQuery(criteria)
-                .list();
+        return new JPAQuery<User>(session)
+                .select(user)
+                .from(user)
+                .fetch();
     }
 
     /**
@@ -44,16 +42,11 @@ public class UserDao {
 //                .setParameter("firstname", firstName)
 //                .list();
 
-        HibernateCriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-
-        JpaCriteriaQuery<User> criteria = criteriaBuilder.createQuery(User.class);
-        JpaRoot<User> user = criteria.from(User.class);
-
-        criteria.select(user)
-                .where(criteriaBuilder.equal(user.get(User_.personalInfo).get(PersonalInfo_.firstname), firstName));
-
-        return session.createQuery(criteria)
-                .list();
+        return new JPAQuery<User>(session)
+                .select(user)
+                .from(user)
+                .where(user.personalInfo.firstname.eq(firstName))
+                .fetch();
     }
 
     /**
@@ -65,18 +58,12 @@ public class UserDao {
 //                .setMaxResults(limit)
 //                .list();
 
-
-        HibernateCriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-
-        JpaCriteriaQuery<User> criteria = criteriaBuilder.createQuery(User.class);
-        JpaRoot<User> user = criteria.from(User.class);
-
-        criteria.select(user)
-                .orderBy(criteriaBuilder.asc(user.get(User_.personalInfo).get(PersonalInfo_.birthDate)));
-
-        return session.createQuery(criteria)
-                .setMaxResults(limit)
-                .list();
+        return new JPAQuery<User>(session)
+                .select(user)
+                .from(user)
+                .orderBy(user.personalInfo.birthDate.asc())
+                .limit(limit)
+                .fetch();
     }
 
     /**
@@ -89,17 +76,12 @@ public class UserDao {
 //                .setParameter("companyName", companyName)
 //                .list();
 
-        HibernateCriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-
-        JpaCriteriaQuery<User> criteria = criteriaBuilder.createQuery(User.class);
-        JpaRoot<Company> company = criteria.from(Company.class);
-        JpaMapJoin<Company, String, User> users = company.join(Company_.users);
-
-        criteria.select(users)
-                .where(criteriaBuilder.equal(company.get(Company_.name), companyName));
-
-        return session.createQuery(criteria)
-                .list();
+        return new JPAQuery<User>(session)
+                .select(user)
+                .from(user)
+                .join(user.company, company)
+                .where(company.name.eq(companyName))
+                .fetch();
     }
 
     /**
@@ -115,20 +97,14 @@ public class UserDao {
 //                .setParameter("companyName", companyName)
 //                .list();
 
-        HibernateCriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-
-        JpaCriteriaQuery<Payment> criteria = criteriaBuilder.createQuery(Payment.class);
-        JpaRoot<Payment> payment = criteria.from(Payment.class);
-        JpaJoin<Payment, User> user = payment.join(Payment_.receiver);
-        JpaJoin<User, Company> company = user.join(User_.company);
-
-        criteria.select(payment)
-                .where(criteriaBuilder.equal(company.get(Company_.name), companyName))
-                .orderBy(criteriaBuilder.asc(user.get(User_.personalInfo).get(PersonalInfo_.firstname)),
-                        criteriaBuilder.asc(payment.get(Payment_.amount)));
-
-        return session.createQuery(criteria)
-                .list();
+        return new JPAQuery<Payment>(session)
+                .select(payment)
+                .from(payment)
+                .join(payment.receiver, user)
+                .join(user.company, company)
+                .where(company.name.eq(companyName))
+                .orderBy(user.personalInfo.firstname.asc(), payment.amount.asc())
+                .fetch();
     }
 
     /**
@@ -142,52 +118,33 @@ public class UserDao {
 //                .setParameter("lastname", lastName)
 //                .uniqueResult();
 
-        HibernateCriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-
-        JpaCriteriaQuery<Double> criteria = criteriaBuilder.createQuery(Double.class);
-        JpaRoot<Payment> payment = criteria.from(Payment.class);
-        JpaJoin<Payment, User> users = payment.join(Payment_.receiver);
-
-        List<Predicate> predicates = new ArrayList<>();
-        if(firstName != null) {
-            predicates.add(criteriaBuilder.equal(users.get(User_.personalInfo).get(PersonalInfo_.firstname), firstName));
-        }
-        if(lastName != null) {
-            predicates.add(criteriaBuilder.equal(users.get(User_.personalInfo).get(PersonalInfo_.lastname), lastName));
-        }
-
-        criteria.select(criteriaBuilder.avg(payment.get(Payment_.amount)))
-                .where(predicates.toArray(Predicate[]::new));
-
-        return session.createQuery(criteria)
-                .uniqueResult();
+        return new JPAQuery<Double>(session)
+                .select(payment.amount.avg())
+                .from(payment)
+                .join(payment.receiver, user)
+                .where(user.personalInfo.firstname.eq(firstName),
+                        user.personalInfo.lastname.eq(lastName))
+                .fetchOne();
     }
 
     /**
      * Возвращает для каждой компании: название, среднюю зарплату всех её сотрудников. Компании упорядочены по названию.
      */
-    public List<CompanyDto> findCompanyNamesWithAvgUserPaymentsOrderedByCompanyName(Session session) {
+    public List<Tuple> findCompanyNamesWithAvgUserPaymentsOrderedByCompanyName(Session session) {
 //        return session.createQuery("select c.name, avg(p.amount) from Company c " +
 //                        "join c.users u " +
 //                        "join u.payments p " +
 //                        "group by c.name", Object[].class)
 //                .list();
 
-        HibernateCriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-
-        JpaCriteriaQuery<CompanyDto> criteria = criteriaBuilder.createQuery(CompanyDto.class);
-        JpaRoot<Company> company = criteria.from(Company.class);
-        JpaMapJoin<Company, String, User> user = company.join(Company_.users, JoinType.INNER);
-        JpaListJoin<User, Payment> payment = user.join(User_.payments);
-
-        criteria.select(criteriaBuilder.construct(CompanyDto.class,
-                        company.get(Company_.name),
-                        criteriaBuilder.avg(payment.get(Payment_.amount))))
-                .groupBy(company.get(Company_.name))
-                .orderBy(criteriaBuilder.asc(company.get(Company_.name)));
-
-        return session.createQuery(criteria)
-                .list();
+        return new JPAQuery<Tuple>(session)
+                .select(company.name, payment.amount.avg())
+                .from(company)
+                .join(company.users, user)
+                .join(user.payments, payment)
+                .groupBy(company.name)
+                .orderBy(company.name.asc())
+                .fetch();
     }
 
     /**
@@ -203,24 +160,18 @@ public class UserDao {
 //                        "order by u.personalInfo.firstname", Object[].class)
 //                .list();
 
-        HibernateCriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
-
-        JpaCriteriaQuery<Tuple> criteria = criteriaBuilder.createQuery(Tuple.class);
-        JpaRoot<User> user = criteria.from(User.class);
-        JpaListJoin<User, Payment> payment = user.join(User_.payments);
-
-        JpaSubQuery<Double> subQuery = criteria.subquery(Double.class);
-        JpaRoot<Payment> paymentSubQuery = subQuery.from(Payment.class);
-
-        criteria.multiselect(user, criteriaBuilder.avg(payment.get(Payment_.amount)))
-                .groupBy(user)
-                .having(criteriaBuilder.gt(criteriaBuilder.avg(payment.get(Payment_.amount)),
-                        subQuery.select(criteriaBuilder.avg(paymentSubQuery.get(Payment_.amount)))
-                        ))
-                .orderBy(criteriaBuilder.asc(user.get(User_.personalInfo).get(PersonalInfo_.firstname)));
-
-        return session.createQuery(criteria)
-                .list();
+        return new JPAQuery<Tuple>(session)
+                .select(user, payment.amount.avg())
+                .from(user)
+                .join(user.payments, payment)
+                .groupBy(user.id)
+                .having(payment.amount.avg().gt(
+                        new JPAQuery<Double>(session)
+                                .select(payment.amount.avg())
+                                .from(payment)
+                ))
+                .orderBy(user.personalInfo.firstname.asc())
+                .fetch();
     }
 
     public static UserDao getInstance() {
