@@ -1,39 +1,29 @@
 package com.andrey;
 
 import com.andrey.entity.Company;
+import com.andrey.entity.User;
 import com.andrey.util.HibernateUtil;
+import com.andrey.util.TestDataImporter;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+
+import java.util.List;
 
 @Slf4j
 public class HibernateRunner {
 
     public static void main(String[] args) {
+        try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
+            Session session = sessionFactory.openSession()) {
+            session.beginTransaction();
 
-        Company google = Company.builder()
-                .name("Facebook")
-                .build();
-//
-//        User user = User.builder()
-//                .username("ivan1234")
-//                .personalInfo(PersonalInfo.builder()
-//                        .firstname("Ivan")
-//                        .lastname("Ivanov")
-//                        .birthDay(new Birthday(LocalDate.of(2000, 12, 15)))
-//                        .build())
-//                .company(google)
-//                .build();
+            List<User> users = session.createQuery("select u from User u", User.class)
+                    .list();
+//            users.forEach(user -> System.out.println(user.getPayments().size()));
+            users.forEach(user -> System.out.println(user.getCompany().getName()));
 
-        try (SessionFactory sessionFactory = HibernateUtil.buildSessionFactory()) {
-            Session session1 = sessionFactory.openSession();
-            try (session1) {
-                session1.beginTransaction();
-
-//                session1.persist(user);
-
-                session1.getTransaction().commit();
-            }
+            session.getTransaction().commit();
         }
     }
 }

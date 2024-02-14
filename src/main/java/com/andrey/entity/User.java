@@ -2,6 +2,7 @@ package com.andrey.entity;
 
 import javax.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Type;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ import java.util.List;
         "order by u.personalInfo.lastname desc ")
 @Data
 @Builder
-@ToString(exclude = {"company", "profile", "userChats"})
+@ToString(exclude = {"company", "userChats", "payments"})
 @EqualsAndHashCode(of = "username")
 @AllArgsConstructor
 @NoArgsConstructor
@@ -41,17 +42,18 @@ public class User implements BaseEntity<Long>, Comparable<User> {
     @JoinColumn(name = "company_id")
     private Company company;
 
-    @OneToOne(
-            mappedBy = "user",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY)
-    private Profile profile;
+//    @OneToOne(
+//            mappedBy = "user",
+//            cascade = CascadeType.ALL,
+//            fetch = FetchType.LAZY)
+//    private Profile profile;
 
     @Builder.Default
     @OneToMany(mappedBy = "user")
     private List<UserChat> userChats = new ArrayList<>();
 
     @Builder.Default
+    @BatchSize(size = 3)
     @OneToMany(mappedBy = "receiver")
     private List<Payment> payments = new ArrayList<>();
 

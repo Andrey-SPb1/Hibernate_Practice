@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Querydsl">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/QPredicate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dto/PaymentFilter.java" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Querydsl. Filters">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/util/TestDataImporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/andrey/dao/UserDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/andrey/dao/UserDaoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,29 +158,23 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.andrey" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.andrey.util" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserDaoTest.findAveragePaymentAmountByFirstAndLastNames">
-    <configuration name="Hibernate_Practice [classes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="classes" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
+  <component name="RunManager" selected="Application.HibernateRunner">
+    <configuration name="HibernateRunner" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.andrey.HibernateRunner" />
+      <module name="Hibernate_Practice.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.andrey.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="UserDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -277,11 +274,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HibernateRunner" />
         <item itemvalue="Gradle.UserDaoTest.findAveragePaymentAmountByFirstAndLastNames" />
         <item itemvalue="Gradle.UserDaoTest" />
         <item itemvalue="Gradle.UserDaoTest.findCompanyNamesWithAvgUserPaymentsOrderedByCompanyName" />
         <item itemvalue="Gradle.UserDaoTest.findAll" />
-        <item itemvalue="Gradle.Hibernate_Practice [classes]" />
       </list>
     </recent_temporary>
   </component>
@@ -390,7 +387,8 @@
       <workItem from="1707738087427" duration="4066000" />
       <workItem from="1707831809279" duration="6090000" />
       <workItem from="1707847154654" duration="37000" />
-      <workItem from="1707852729808" duration="4318000" />
+      <workItem from="1707852729808" duration="4618000" />
+      <workItem from="1707911711841" duration="3659000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -675,7 +673,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707836328458</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Querydsl. Filters">
+      <created>1707857468660</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1707857468660</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -693,7 +698,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Hibernate proxy" />
     <MESSAGE value="Cascade types" />
     <MESSAGE value="Cascade types with collections" />
     <MESSAGE value="Entity equals and hashCode" />
@@ -718,7 +722,8 @@
     <MESSAGE value="HQL. Practice" />
     <MESSAGE value="Criteria API" />
     <MESSAGE value="Querydsl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Querydsl" />
+    <MESSAGE value="Querydsl. Filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Querydsl. Filters" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -2,6 +2,7 @@ package com.andrey.entity;
 
 import javax.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.BatchSize;
 
 import java.util.*;
 
@@ -12,6 +13,7 @@ import java.util.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@BatchSize(size = 3)
 public class Company {
 
     @Id

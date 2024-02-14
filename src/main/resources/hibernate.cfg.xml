@@ -8,8 +8,10 @@
         <property name="connection.driver_class">org.postgresql.Driver</property>
         <property name="connection.username">postgres</property>
         <property name="connection.password">pass</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">validate</property>
 
         <mapping class="com.andrey.entity.User"/>
         <mapping class="com.andrey.entity.Company"/>
@@ -17,7 +19,5 @@
         <mapping class="com.andrey.entity.Chat"/>
         <mapping class="com.andrey.entity.UserChat"/>
         <mapping class="com.andrey.entity.Payment"/>
-        <!-- DB schema will be updated if needed -->
-        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
     </session-factory>
 </hibernate-configuration>
