@@ -13,7 +13,7 @@ import java.util.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@BatchSize(size = 3)
+//@BatchSize(size = 3)
 public class Company {
 
     @Id

@@ -3,6 +3,8 @@ package com.andrey.entity;
 import javax.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.BatchSize;
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
 import org.hibernate.annotations.Type;
 
 import java.util.ArrayList;
@@ -40,6 +42,7 @@ public class User implements BaseEntity<Long>, Comparable<User> {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
+    @Fetch(value = FetchMode.JOIN)
     private Company company;
 
 //    @OneToOne(
@@ -53,7 +56,8 @@ public class User implements BaseEntity<Long>, Comparable<User> {
     private List<UserChat> userChats = new ArrayList<>();
 
     @Builder.Default
-    @BatchSize(size = 3)
+//    @BatchSize(size = 3)
+    @Fetch(value = FetchMode.SUBSELECT)
     @OneToMany(mappedBy = "receiver")
     private List<Payment> payments = new ArrayList<>();
 
