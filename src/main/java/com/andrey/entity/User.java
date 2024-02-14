@@ -42,7 +42,7 @@ public class User implements BaseEntity<Long>, Comparable<User> {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
-    @Fetch(value = FetchMode.JOIN)
+//    @Fetch(value = FetchMode.JOIN)
     private Company company;
 
 //    @OneToOne(
@@ -57,7 +57,7 @@ public class User implements BaseEntity<Long>, Comparable<User> {
 
     @Builder.Default
 //    @BatchSize(size = 3)
-    @Fetch(value = FetchMode.SUBSELECT)
+//    @Fetch(value = FetchMode.SUBSELECT)
     @OneToMany(mappedBy = "receiver")
     private List<Payment> payments = new ArrayList<>();
 

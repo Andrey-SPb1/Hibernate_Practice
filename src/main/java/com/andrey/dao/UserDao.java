@@ -100,7 +100,7 @@ public class UserDao {
         return new JPAQuery<Payment>(session)
                 .select(payment)
                 .from(payment)
-                .join(payment.receiver, user)
+                .join(payment.receiver, user).fetchJoin()
                 .join(user.company, company)
                 .where(company.name.eq(companyName))
                 .orderBy(user.personalInfo.firstname.asc(), payment.amount.asc())
