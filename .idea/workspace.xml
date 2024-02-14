@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Query Fetch">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="@FetchProfile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -383,7 +384,7 @@
       <workItem from="1707831809279" duration="6090000" />
       <workItem from="1707847154654" duration="37000" />
       <workItem from="1707852729808" duration="4618000" />
-      <workItem from="1707911711841" duration="8768000" />
+      <workItem from="1707911711841" duration="12176000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -696,7 +697,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707918629230</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="@FetchProfile">
+      <created>1707921600407</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1707921600407</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -714,7 +722,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Entity equals and hashCode" />
     <MESSAGE value="LazyInitialisationException" />
     <MESSAGE value="LazyInitializationException" />
     <MESSAGE value="OrphanRemoval" />
@@ -739,7 +746,8 @@
     <MESSAGE value="Querydsl. Filters" />
     <MESSAGE value="@BatchSize" />
     <MESSAGE value="Query Fetch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Query Fetch" />
+    <MESSAGE value="@FetchProfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="@FetchProfile" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

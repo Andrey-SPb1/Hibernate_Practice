@@ -11,6 +11,15 @@ import org.hibernate.annotations.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedEntityGraph(name = "withCompanyAndChat",
+        attributeNodes = {
+            @NamedAttributeNode("company"),
+            @NamedAttributeNode(value = "userChats", subgraph = "chats")
+        },
+        subgraphs = {
+            @NamedSubgraph(name = "chats", attributeNodes = @NamedAttributeNode("chat"))
+        }
+)
 @FetchProfile(name = "withCompanyAndPayments", fetchOverrides = {
         @FetchProfile.FetchOverride(
                 entity = User.class, association = "company", mode = FetchMode.JOIN
