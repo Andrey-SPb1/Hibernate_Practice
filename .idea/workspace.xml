@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Optimistic. Part 1">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Optimistic. Part 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" afterDir="false" />
@@ -386,7 +386,8 @@
       <workItem from="1707911711841" duration="12981000" />
       <workItem from="1708003126304" duration="2523000" />
       <workItem from="1708008674207" duration="1396000" />
-      <workItem from="1708012133339" duration="973000" />
+      <workItem from="1708012133339" duration="1749000" />
+      <workItem from="1708031550883" duration="1870000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -720,7 +721,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708010226583</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Optimistic. Part 2">
+      <created>1708013545805</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1708013545805</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -738,7 +746,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="OrphanRemoval" />
     <MESSAGE value="OneToOne Primary key" />
     <MESSAGE value="OneToOne Foreign key" />
     <MESSAGE value="ManyToMany" />
@@ -763,7 +770,8 @@
     <MESSAGE value="@FetchProfile" />
     <MESSAGE value="Entity Graphs" />
     <MESSAGE value="Optimistic. Part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimistic. Part 1" />
+    <MESSAGE value="Optimistic. Part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Optimistic. Part 2" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

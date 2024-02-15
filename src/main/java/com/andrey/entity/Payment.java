@@ -22,8 +22,8 @@ public class Payment implements BaseEntity<Long> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-//    @Version
-//    private Long version;
+    @Version
+    private Long version;
 
     @Column(nullable = false)
     private Integer amount;
