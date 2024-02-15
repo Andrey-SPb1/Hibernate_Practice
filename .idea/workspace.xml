@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="@FetchProfile">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Entity Graphs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -384,7 +383,9 @@
       <workItem from="1707831809279" duration="6090000" />
       <workItem from="1707847154654" duration="37000" />
       <workItem from="1707852729808" duration="4618000" />
-      <workItem from="1707911711841" duration="12176000" />
+      <workItem from="1707911711841" duration="12981000" />
+      <workItem from="1708003126304" duration="2523000" />
+      <workItem from="1708008674207" duration="1090000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -704,7 +705,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707921600407</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Entity Graphs">
+      <created>1707926271041</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1707926271041</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -722,7 +730,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="LazyInitialisationException" />
     <MESSAGE value="LazyInitializationException" />
     <MESSAGE value="OrphanRemoval" />
     <MESSAGE value="OneToOne Primary key" />
@@ -747,7 +754,8 @@
     <MESSAGE value="@BatchSize" />
     <MESSAGE value="Query Fetch" />
     <MESSAGE value="@FetchProfile" />
-    <option name="LAST_COMMIT_MESSAGE" value="@FetchProfile" />
+    <MESSAGE value="Entity Graphs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Entity Graphs" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
