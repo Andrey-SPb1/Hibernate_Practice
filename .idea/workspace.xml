@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Nontransactional data access">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Entity callbacks">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/listener/AuditListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/listener/UserChatListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/AuditableEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/AuditableEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Chat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Chat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/util/TestDataImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/util/TestDataImporter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +134,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
@@ -390,14 +394,8 @@
       <workItem from="1708008674207" duration="1396000" />
       <workItem from="1708012133339" duration="1749000" />
       <workItem from="1708031550883" duration="1947000" />
-      <workItem from="1708086665286" duration="3502000" />
-    </task>
-    <task id="LOCAL-00002" summary="entity">
-      <created>1703279030554</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1703279030554</updated>
+      <workItem from="1708086665286" duration="8617000" />
+      <workItem from="1708098685233" duration="4955000" />
     </task>
     <task id="LOCAL-00003" summary="session">
       <created>1703381985823</created>
@@ -745,7 +743,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708090934807</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Entity callbacks">
+      <created>1708093351418</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1708093351418</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -763,7 +768,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ManyToMany Separate entity" />
     <MESSAGE value="PersistentBag" />
     <MESSAGE value="ElementCollection" />
     <MESSAGE value="Collection ordering" />
@@ -788,12 +792,23 @@
     <MESSAGE value="Pessimistic" />
     <MESSAGE value="Read only transaction" />
     <MESSAGE value="Nontransactional data access" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nontransactional data access" />
+    <MESSAGE value="Entity callbacks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Entity callbacks" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.andrey.entity.Company" memberName="id" />
+        <PinnedItemInfo parentTag="org.hibernate.jpa.event.internal.CallbackRegistryImpl" memberName="preCreates" />
       </pinned-members>
     </pin-to-top-manager>
   </component>

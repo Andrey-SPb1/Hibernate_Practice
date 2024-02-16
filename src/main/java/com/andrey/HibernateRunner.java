@@ -1,8 +1,6 @@
 package com.andrey;
 
-import com.andrey.entity.Payment;
-import com.andrey.entity.Profile;
-import com.andrey.entity.User;
+import com.andrey.entity.*;
 import com.andrey.util.HibernateUtil;
 import com.andrey.util.TestDataImporter;
 import lombok.extern.slf4j.Slf4j;

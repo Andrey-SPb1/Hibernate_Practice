@@ -1,16 +1,15 @@
 package com.andrey.entity;
 
 import javax.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
+import lombok.*;
 import org.hibernate.annotations.DynamicUpdate;
 import org.hibernate.annotations.OptimisticLockType;
 import org.hibernate.annotations.OptimisticLocking;
 
 import java.time.Instant;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -33,18 +32,6 @@ public class Payment extends AuditableEntity<Long> {
     @ManyToOne(optional = false, fetch = FetchType.LAZY)
     @JoinColumn(name = "receiver_id")
     private User receiver;
-
-    @PrePersist
-    public void prePersist() {
-        setCreatedAt(Instant.now());
-//        setCreatedBy("");
-    }
-
-    @PreUpdate
-    public void preUpdate() {
-        setUpdateAt(Instant.now());
-    }
-
 }
 
 

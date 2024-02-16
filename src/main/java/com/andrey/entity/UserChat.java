@@ -1,6 +1,8 @@
 package com.andrey.entity;
 
 import javax.persistence.*;
+
+import com.andrey.listener.UserChatListener;
 import lombok.*;
 
 
@@ -11,6 +13,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "users_chat")
+@EntityListeners(UserChatListener.class)
 public class UserChat extends AuditableEntity<Long> {
 
     @Id
