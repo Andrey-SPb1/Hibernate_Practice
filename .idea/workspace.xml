@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Optimistic. Part 2">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Pessimistic">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -387,7 +386,8 @@
       <workItem from="1708003126304" duration="2523000" />
       <workItem from="1708008674207" duration="1396000" />
       <workItem from="1708012133339" duration="1749000" />
-      <workItem from="1708031550883" duration="1870000" />
+      <workItem from="1708031550883" duration="1947000" />
+      <workItem from="1708086665286" duration="948000" />
     </task>
     <task id="LOCAL-00001" summary="Configuration Session Factory">
       <created>1703186275641</created>
@@ -728,7 +728,14 @@
       <option name="project" value="LOCAL" />
       <updated>1708013545805</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Pessimistic">
+      <created>1708034184080</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1708034184080</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -746,7 +753,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="OneToOne Primary key" />
     <MESSAGE value="OneToOne Foreign key" />
     <MESSAGE value="ManyToMany" />
     <MESSAGE value="ManyToMany Separate entity" />
@@ -771,7 +777,8 @@
     <MESSAGE value="Entity Graphs" />
     <MESSAGE value="Optimistic. Part 1" />
     <MESSAGE value="Optimistic. Part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimistic. Part 2" />
+    <MESSAGE value="Pessimistic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pessimistic" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
