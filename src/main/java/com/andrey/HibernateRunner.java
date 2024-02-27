@@ -1,6 +1,7 @@
 package com.andrey;
 
 import com.andrey.entity.*;
+import com.andrey.interceptor.GlobalInterceptor;
 import com.andrey.util.HibernateUtil;
 import com.andrey.util.TestDataImporter;
 import lombok.extern.slf4j.Slf4j;
@@ -12,7 +13,10 @@ public class HibernateRunner {
 
     public static void main(String[] args) {
         try(SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
-            Session session = sessionFactory.openSession()) {
+            Session session = sessionFactory
+                    .withOptions()
+                    .interceptor(new GlobalInterceptor())
+                    .openSession()) {
             TestDataImporter.importData(sessionFactory);
 
             session.beginTransaction();

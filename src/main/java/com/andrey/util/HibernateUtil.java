@@ -1,6 +1,7 @@
 package com.andrey.util;
 
 import com.andrey.converter.BirthdayConverter;
+import com.andrey.interceptor.GlobalInterceptor;
 import com.andrey.listener.AuditTableListener;
 import lombok.experimental.UtilityClass;
 import org.hibernate.SessionFactory;
@@ -16,6 +17,7 @@ public class HibernateUtil {
         Configuration configuration = new Configuration();
 //        configuration.addAnnotatedClass(User.class);
         configuration.addAttributeConverter(new BirthdayConverter());
+        configuration.setInterceptor(new GlobalInterceptor());
         configuration.configure();
 
         SessionFactory sessionFactory = configuration.buildSessionFactory();
