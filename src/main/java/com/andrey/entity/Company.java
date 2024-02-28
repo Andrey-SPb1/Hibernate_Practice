@@ -3,6 +3,8 @@ package com.andrey.entity;
 import javax.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.BatchSize;
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.NotAudited;
 
 import java.util.*;
 
@@ -14,6 +16,7 @@ import java.util.*;
 @AllArgsConstructor
 @Builder
 //@BatchSize(size = 3)
+@Audited
 public class Company {
 
     @Id
@@ -26,6 +29,7 @@ public class Company {
     @Builder.Default
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)
     @MapKey(name = "username")
+    @NotAudited
     private Map<String, User> users = new HashMap<>();
 
     @Builder.Default
@@ -33,6 +37,7 @@ public class Company {
     @CollectionTable(name = "company_locale", joinColumns = @JoinColumn(name = "company_id"))
     @Column(name = "description")
     @MapKeyColumn(name = "lang")
+    @NotAudited
     private Map<String, String> locales = new HashMap<>();
 
     public void addUser(User user) {

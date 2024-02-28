@@ -7,6 +7,8 @@ import javax.persistence.Table;
 
 import lombok.*;
 import org.hibernate.annotations.*;
+import org.hibernate.envers.Audited;
+import org.hibernate.envers.NotAudited;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,6 +42,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "users", schema = "public")
+@Audited
 public class User implements BaseEntity<Long>, Comparable<User> {
 
     @Id
@@ -71,12 +74,14 @@ public class User implements BaseEntity<Long>, Comparable<User> {
 
     @Builder.Default
     @OneToMany(mappedBy = "user")
+    @NotAudited
     private List<UserChat> userChats = new ArrayList<>();
 
     @Builder.Default
 //    @BatchSize(size = 3)
 //    @Fetch(value = FetchMode.SUBSELECT)
     @OneToMany(mappedBy = "receiver")
+    @NotAudited
     private List<Payment> payments = new ArrayList<>();
 
     @Override
