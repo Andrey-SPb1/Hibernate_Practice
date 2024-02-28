@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Hibernate Envers. Part 1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Revision.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/listener/AndreyRevisionListener.java" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Hibernate Envers. Part 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -402,14 +401,7 @@
       <workItem from="1708980100444" duration="89000" />
       <workItem from="1709040572675" duration="8224000" />
       <workItem from="1709121718124" duration="4416000" />
-      <workItem from="1709137706765" duration="980000" />
-    </task>
-    <task id="LOCAL-00007" summary="first level cache">
-      <created>1703537759600</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1703537759601</updated>
+      <workItem from="1709137706765" duration="4108000" />
     </task>
     <task id="LOCAL-00008" summary="entity lifecycle">
       <created>1703560701305</created>
@@ -757,7 +749,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709124913413</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Hibernate Envers. Part 2">
+      <created>1709138775461</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1709138775462</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -775,7 +774,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="In-Memory database. H2" />
     <MESSAGE value="Docker testcontainers" />
     <MESSAGE value="MappedSuperclass" />
     <MESSAGE value="TABLE_PER_CLASS" />
@@ -800,7 +798,8 @@
     <MESSAGE value="Event Listeners" />
     <MESSAGE value="Interceptors" />
     <MESSAGE value="Hibernate Envers. Part 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hibernate Envers. Part 1" />
+    <MESSAGE value="Hibernate Envers. Part 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hibernate Envers. Part 2" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
