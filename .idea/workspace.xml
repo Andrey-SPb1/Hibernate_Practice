@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Interceptors">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Hibernate Envers. Part 1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Revision.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/listener/AndreyRevisionListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/util/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/util/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -404,14 +401,8 @@
       <workItem from="1708959206532" duration="3096000" />
       <workItem from="1708980100444" duration="89000" />
       <workItem from="1709040572675" duration="8224000" />
-      <workItem from="1709121718124" duration="2715000" />
-    </task>
-    <task id="LOCAL-00006" summary="custom user type">
-      <created>1703470703896</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1703470703896</updated>
+      <workItem from="1709121718124" duration="4416000" />
+      <workItem from="1709137706765" duration="980000" />
     </task>
     <task id="LOCAL-00007" summary="first level cache">
       <created>1703537759600</created>
@@ -759,7 +750,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709056900052</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Hibernate Envers. Part 1">
+      <created>1709124913412</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1709124913413</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -777,7 +775,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Maps in mappings" />
     <MESSAGE value="In-Memory database. H2" />
     <MESSAGE value="Docker testcontainers" />
     <MESSAGE value="MappedSuperclass" />
@@ -802,7 +799,8 @@
     <MESSAGE value="Listener callbacks" />
     <MESSAGE value="Event Listeners" />
     <MESSAGE value="Interceptors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interceptors" />
+    <MESSAGE value="Hibernate Envers. Part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hibernate Envers. Part 1" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
