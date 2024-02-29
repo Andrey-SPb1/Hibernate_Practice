@@ -1,11 +1,11 @@
 package com.andrey.entity;
 
 import javax.persistence.*;
+import javax.persistence.Entity;
 
 import lombok.*;
-import org.hibernate.annotations.DynamicUpdate;
-import org.hibernate.annotations.OptimisticLockType;
-import org.hibernate.annotations.OptimisticLocking;
+import org.hibernate.annotations.*;
+import org.hibernate.annotations.Cache;
 import org.hibernate.envers.Audited;
 import org.hibernate.envers.NotAudited;
 import org.hibernate.envers.RelationTargetAuditMode;
@@ -21,6 +21,7 @@ import java.time.Instant;
 //@OptimisticLocking(type = OptimisticLockType.ALL)
 //@DynamicUpdate
 @Audited
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class Payment extends AuditableEntity<Long> {
 
     @Id

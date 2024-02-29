@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Second Level Cache. @Cache">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ehcache-config.xml" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Second Level Cache. Regions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -408,14 +407,8 @@
       <workItem from="1709197609440" duration="1566000" />
       <workItem from="1709199218382" duration="1106000" />
       <workItem from="1709214624128" duration="5076000" />
-      <workItem from="1709223067972" duration="1950000" />
-    </task>
-    <task id="LOCAL-00010" summary="Rolling File Appender">
-      <created>1705328906158</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1705328906158</updated>
+      <workItem from="1709223067972" duration="3229000" />
+      <workItem from="1709231637811" duration="2672000" />
     </task>
     <task id="LOCAL-00011" summary="Embedded components">
       <created>1705436126336</created>
@@ -763,7 +756,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709219690468</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Second Level Cache. Regions">
+      <created>1709225382493</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1709225382494</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -781,7 +781,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TABLE_PER_CLASS" />
     <MESSAGE value="SINGLE_TABLE" />
     <MESSAGE value="JOINED" />
     <MESSAGE value="HQL. Part 2" />
@@ -806,9 +805,19 @@
     <MESSAGE value="Hibernate Envers. Part 2" />
     <MESSAGE value="Second Level Cache. Конфигурация" />
     <MESSAGE value="Second Level Cache. @Cache" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second Level Cache. @Cache" />
+    <MESSAGE value="Second Level Cache. Regions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second Level Cache. Regions" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.andrey.entity.Company" memberName="id" />
