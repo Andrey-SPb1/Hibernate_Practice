@@ -7,6 +7,7 @@ import javax.persistence.Table;
 
 import lombok.*;
 import org.hibernate.annotations.*;
+import org.hibernate.annotations.Cache;
 import org.hibernate.envers.Audited;
 import org.hibernate.envers.NotAudited;
 
@@ -43,6 +44,7 @@ import java.util.List;
 @Entity
 @Table(name = "users", schema = "public")
 @Audited
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class User implements BaseEntity<Long>, Comparable<User> {
 
     @Id
@@ -54,7 +56,6 @@ public class User implements BaseEntity<Long>, Comparable<User> {
 
     @Column(unique = true)
     private String username;
-
 
     private Integer age;
 
@@ -75,6 +76,7 @@ public class User implements BaseEntity<Long>, Comparable<User> {
     @Builder.Default
     @OneToMany(mappedBy = "user")
     @NotAudited
+    @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private List<UserChat> userChats = new ArrayList<>();
 
     @Builder.Default

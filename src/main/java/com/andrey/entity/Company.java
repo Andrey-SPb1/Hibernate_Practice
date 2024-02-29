@@ -2,7 +2,8 @@ package com.andrey.entity;
 
 import javax.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.BatchSize;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.hibernate.envers.Audited;
 import org.hibernate.envers.NotAudited;
 
@@ -17,6 +18,7 @@ import java.util.*;
 @Builder
 //@BatchSize(size = 3)
 @Audited
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Company {
 
     @Id

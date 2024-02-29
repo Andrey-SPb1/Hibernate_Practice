@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Hibernate Envers. Part 2">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Second Level Cache. Конфигурация">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/UserChat.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -407,14 +407,7 @@
       <workItem from="1709161645172" duration="369000" />
       <workItem from="1709197609440" duration="1566000" />
       <workItem from="1709199218382" duration="1106000" />
-      <workItem from="1709214624128" duration="1546000" />
-    </task>
-    <task id="LOCAL-00008" summary="entity lifecycle">
-      <created>1703560701305</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1703560701305</updated>
+      <workItem from="1709214624128" duration="5014000" />
     </task>
     <task id="LOCAL-00009" summary="log4j">
       <created>1705323703427</created>
@@ -762,7 +755,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709138775462</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Second Level Cache. Конфигурация">
+      <created>1709216458790</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1709216458792</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -780,7 +780,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Docker testcontainers" />
     <MESSAGE value="MappedSuperclass" />
     <MESSAGE value="TABLE_PER_CLASS" />
     <MESSAGE value="SINGLE_TABLE" />
@@ -805,7 +804,8 @@
     <MESSAGE value="Interceptors" />
     <MESSAGE value="Hibernate Envers. Part 1" />
     <MESSAGE value="Hibernate Envers. Part 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hibernate Envers. Part 2" />
+    <MESSAGE value="Second Level Cache. Конфигурация" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second Level Cache. Конфигурация" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
