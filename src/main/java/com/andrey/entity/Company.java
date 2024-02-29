@@ -18,7 +18,7 @@ import java.util.*;
 @Builder
 //@BatchSize(size = 3)
 @Audited
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "Companies")
 public class Company {
 
     @Id
