@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Hibernate Envers. Part 2">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
@@ -128,7 +130,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
@@ -170,6 +172,28 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Hibernate_Practice [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>false</ForceTestExec>
+      <method v="2" />
     </configuration>
     <configuration name="UserDaoTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -243,37 +267,13 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
-    <configuration name="UserDaoTest.findCompanyNamesWithAvgUserPaymentsOrderedByCompanyName" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.andrey.dao.UserDaoTest.findCompanyNamesWithAvgUserPaymentsOrderedByCompanyName&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>true</ForceTestExec>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UserDaoTest.findAllPaymentsByCompanyName" />
+        <item itemvalue="Gradle.Hibernate_Practice [build]" />
         <item itemvalue="Application.HibernateRunner" />
+        <item itemvalue="Gradle.UserDaoTest.findAllPaymentsByCompanyName" />
         <item itemvalue="Gradle.UserDaoTest.findAveragePaymentAmountByFirstAndLastNames" />
         <item itemvalue="Gradle.UserDaoTest" />
-        <item itemvalue="Gradle.UserDaoTest.findCompanyNamesWithAvgUserPaymentsOrderedByCompanyName" />
       </list>
     </recent_temporary>
   </component>
@@ -402,6 +402,12 @@
       <workItem from="1709040572675" duration="8224000" />
       <workItem from="1709121718124" duration="4416000" />
       <workItem from="1709137706765" duration="4108000" />
+      <workItem from="1709160694577" duration="159000" />
+      <workItem from="1709161024697" duration="411000" />
+      <workItem from="1709161645172" duration="369000" />
+      <workItem from="1709197609440" duration="1566000" />
+      <workItem from="1709199218382" duration="1106000" />
+      <workItem from="1709214624128" duration="1546000" />
     </task>
     <task id="LOCAL-00008" summary="entity lifecycle">
       <created>1703560701305</created>
