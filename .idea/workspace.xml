@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Second Level Cache. Query Cache">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/CompanyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/PaymentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/Repository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/RepositoryBase.java" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="DAO &amp; Repository. CRUD">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/dao/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/CompanyRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/dao/PaymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/PaymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/dao/RepositoryBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/RepositoryBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -413,14 +412,8 @@
       <workItem from="1709223067972" duration="3229000" />
       <workItem from="1709231637811" duration="4298000" />
       <workItem from="1709240914803" duration="628000" />
-      <workItem from="1709294015589" duration="4711000" />
-    </task>
-    <task id="LOCAL-00012" summary="Primary keys">
-      <created>1705603296345</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1705603296345</updated>
+      <workItem from="1709294015589" duration="4832000" />
+      <workItem from="1709314823113" duration="8017000" />
     </task>
     <task id="LOCAL-00013" summary="EmbeddedId">
       <created>1705607118776</created>
@@ -768,7 +761,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709235260484</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="DAO &amp; Repository. CRUD">
+      <created>1709298826107</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1709298826108</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -786,7 +786,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="JOINED" />
     <MESSAGE value="HQL. Part 2" />
     <MESSAGE value="HQL. Practice" />
     <MESSAGE value="Criteria API" />
@@ -811,7 +810,8 @@
     <MESSAGE value="Second Level Cache. @Cache" />
     <MESSAGE value="Second Level Cache. Regions" />
     <MESSAGE value="Second Level Cache. Query Cache" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second Level Cache. Query Cache" />
+    <MESSAGE value="DAO &amp; Repository. CRUD" />
+    <option name="LAST_COMMIT_MESSAGE" value="DAO &amp; Repository. CRUD" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

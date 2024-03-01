@@ -1,10 +1,11 @@
 package com.andrey.dao;
 
 import com.andrey.entity.Company;
-import org.hibernate.SessionFactory;
+
+import javax.persistence.EntityManager;
 
 public class CompanyRepository extends RepositoryBase<Integer, Company> {
-    public CompanyRepository(SessionFactory sessionFactory) {
-        super(sessionFactory, Company.class);
+    public CompanyRepository(EntityManager entityManager) {
+        super(entityManager, Company.class);
     }
 }
