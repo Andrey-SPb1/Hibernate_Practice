@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Second Level Cache. Regions">
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="Second Level Cache. Query Cache">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/CompanyRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/PaymentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/Repository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/RepositoryBase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Payment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/Company.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -408,14 +411,9 @@
       <workItem from="1709199218382" duration="1106000" />
       <workItem from="1709214624128" duration="5076000" />
       <workItem from="1709223067972" duration="3229000" />
-      <workItem from="1709231637811" duration="2672000" />
-    </task>
-    <task id="LOCAL-00011" summary="Embedded components">
-      <created>1705436126336</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1705436126336</updated>
+      <workItem from="1709231637811" duration="4298000" />
+      <workItem from="1709240914803" duration="628000" />
+      <workItem from="1709294015589" duration="4711000" />
     </task>
     <task id="LOCAL-00012" summary="Primary keys">
       <created>1705603296345</created>
@@ -763,7 +761,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709225382494</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Second Level Cache. Query Cache">
+      <created>1709235260483</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1709235260484</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -781,7 +786,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="SINGLE_TABLE" />
     <MESSAGE value="JOINED" />
     <MESSAGE value="HQL. Part 2" />
     <MESSAGE value="HQL. Practice" />
@@ -806,18 +810,10 @@
     <MESSAGE value="Second Level Cache. Конфигурация" />
     <MESSAGE value="Second Level Cache. @Cache" />
     <MESSAGE value="Second Level Cache. Regions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second Level Cache. Regions" />
+    <MESSAGE value="Second Level Cache. Query Cache" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second Level Cache. Query Cache" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="com.andrey.entity.Company" memberName="id" />
