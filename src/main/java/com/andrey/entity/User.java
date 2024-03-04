@@ -14,6 +14,10 @@ import org.hibernate.envers.NotAudited;
 import java.util.ArrayList;
 import java.util.List;
 
+@NamedEntityGraph(name = "withCompany",
+        attributeNodes = {
+            @NamedAttributeNode("company"),
+        })
 @NamedEntityGraph(name = "withCompanyAndChat",
         attributeNodes = {
             @NamedAttributeNode("company"),
@@ -21,8 +25,7 @@ import java.util.List;
         },
         subgraphs = {
             @NamedSubgraph(name = "chats", attributeNodes = @NamedAttributeNode("chat"))
-        }
-)
+        })
 @FetchProfile(name = "withCompanyAndPayments", fetchOverrides = {
         @FetchProfile.FetchOverride(
                 entity = User.class, association = "company", mode = FetchMode.JOIN
