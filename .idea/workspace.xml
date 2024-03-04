@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="DAO &amp; Repository. CurrentSessionContext">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dto/CompanyReadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dto/UserCreateDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dto/UserReadDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/interceptor/TransactionInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/mapper/CompanyReadMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/mapper/Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/mapper/UserCreateMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/mapper/UserReadMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/service/UserService.java" afterDir="false" />
+    <list default="true" id="dedddc6a-1efb-4672-84b9-538930125740" name="Changes" comment="DAO &amp; Repository. Practice">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrey/validation/UpdateCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/HibernateRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/dao/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/Repository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/dao/RepositoryBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dao/RepositoryBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/dto/UserCreateDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/dto/UserCreateDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/PersonalInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/PersonalInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrey/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrey/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,8 +68,8 @@
         <option value="JUnit5 Test Class" />
         <option value="Enum" />
         <option value="Record" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -426,14 +420,8 @@
       <workItem from="1709314823113" duration="8216000" />
       <workItem from="1709387149152" duration="7260000" />
       <workItem from="1709411874696" duration="2834000" />
-      <workItem from="1709549761589" duration="2354000" />
-    </task>
-    <task id="LOCAL-00014" summary="ManyToOne">
-      <created>1705609332144</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1705609332144</updated>
+      <workItem from="1709549761589" duration="2612000" />
+      <workItem from="1709567660304" duration="2207000" />
     </task>
     <task id="LOCAL-00015" summary="Fetch types">
       <created>1705747922859</created>
@@ -781,7 +769,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709333939294</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="DAO &amp; Repository. Practice">
+      <created>1709552385285</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1709552385286</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -799,7 +794,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="HQL. Practice" />
     <MESSAGE value="Criteria API" />
     <MESSAGE value="Querydsl" />
     <MESSAGE value="Querydsl. Filters" />
@@ -824,7 +818,8 @@
     <MESSAGE value="Second Level Cache. Query Cache" />
     <MESSAGE value="DAO &amp; Repository. CRUD" />
     <MESSAGE value="DAO &amp; Repository. CurrentSessionContext" />
-    <option name="LAST_COMMIT_MESSAGE" value="DAO &amp; Repository. CurrentSessionContext" />
+    <MESSAGE value="DAO &amp; Repository. Practice" />
+    <option name="LAST_COMMIT_MESSAGE" value="DAO &amp; Repository. Practice" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

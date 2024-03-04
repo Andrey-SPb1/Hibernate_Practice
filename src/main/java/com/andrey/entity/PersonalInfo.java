@@ -1,6 +1,8 @@
 package com.andrey.entity;
 
 import javax.persistence.Embeddable;
+import javax.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,6 +24,7 @@ public class PersonalInfo implements Serializable {
 
     private String firstname;
     private String lastname;
+    @NotNull
     private LocalDate birthDate;
 
 }

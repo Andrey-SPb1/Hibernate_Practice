@@ -60,7 +60,7 @@ public class HibernateRunner {
                             .lastname("Ivanova")
                             .birthDate(LocalDate.now())
                             .build(),
-                    "maria3@gmail.com",
+                    "maria4@gmail.com",
                     Role.USER,
                     1);
 

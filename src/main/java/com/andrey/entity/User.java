@@ -4,6 +4,8 @@ import javax.persistence.*;
 import javax.persistence.Entity;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import lombok.*;
 import org.hibernate.annotations.*;
@@ -54,9 +56,11 @@ public class User implements BaseEntity<Long>, Comparable<User> {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Valid
     @AttributeOverride(name = "birthDate", column = @Column(name = "birth_date"))
     private PersonalInfo personalInfo;
 
+    @NotNull
     @Column(unique = true)
     private String username;
 
